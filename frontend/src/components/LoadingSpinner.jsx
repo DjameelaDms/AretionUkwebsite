@@ -65,18 +65,20 @@ const LoadingSpinner = () => {
             width: '100%',
             height: '100%',
             objectFit: 'contain',
-            animation: 'spin 2s linear infinite'
+            animation: 'gentlePulse 2s ease-in-out infinite'
           }}
         />
       </div>
       
       <style jsx>{`
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
+        @keyframes gentlePulse {
+          0%, 100% {
+            opacity: 1;
+            transform: scale(1);
           }
-          to {
-            transform: rotate(360deg);
+          50% {
+            opacity: 0.7;
+            transform: scale(1.05);
           }
         }
 
