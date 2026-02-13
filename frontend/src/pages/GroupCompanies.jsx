@@ -124,14 +124,14 @@ const GroupCompanies = () => {
                   className="rounded-lg p-6 mb-6"
                   style={{ 
                     backgroundColor: 'var(--aretion-navy)',
-                    color: 'var(--text-light)'
+                    color: 'white'
                   }}
                 >
                   <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-tan)' }}>
                     FEATURED JOURNAL
                   </div>
-                  <h3 className="text-xl mb-2">Journal of Medicine, Law and Public Health (JMLPH)</h3>
-                  <p className="text-sm mb-4 opacity-90">
+                  <h3 className="text-xl mb-2" style={{ color: 'white' }}>Journal of Medicine, Law and Public Health (JMLPH)</h3>
+                  <p className="text-sm mb-4" style={{ color: 'white', opacity: 0.9 }}>
                     Peer-reviewed journal acquired in 2025
                   </p>
                   <a
