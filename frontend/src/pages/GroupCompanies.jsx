@@ -194,18 +194,6 @@ const GroupCompanies = () => {
                   Advisory and project support across healthcare governance and medical law research themes, 
                   delivered with confidentiality and disciplined execution.
                 </p>
-                <div 
-                  className="rounded-lg p-4 mb-6 border-l-4"
-                  style={{ 
-                    backgroundColor: 'rgba(166, 90, 58, 0.05)',
-                    borderColor: 'var(--aretion-rust)'
-                  }}
-                >
-                  <p className="text-sm font-medium" style={{ color: 'var(--aretion-rust)' }}>
-                    <strong>Important:</strong> We are not a law firm and do not provide legal advice. 
-                    Our work focuses on governance, research, and programme support in medical law–related themes.
-                  </p>
-                </div>
                 <div className="mb-6">
                   <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
                     Current themes:
