@@ -50,11 +50,6 @@ const About = () => {
                 specialist publishing and strategic consulting.
               </p>
               <p>
-                In 2025, the group was strengthened through strategic merger and acquisition activity, including the 
-                acquisition of the Journal of Medicine, Law and Public Health (JMLPH), reinforcing our commitment to 
-                publishing excellence and research integrity.
-              </p>
-              <p>
                 Throughout this evolution, we have retained our clear focus on strengthening health and care systems, 
                 particularly where resources are constrained, and on building lasting partnerships with organisations 
                 committed to improving patient outcomes.
