@@ -12,62 +12,85 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with Background Image */}
       <section 
-        className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden"
-        style={{ backgroundColor: 'var(--aretion-off-white)' }}
+        className="relative pt-32 pb-32 md:pt-48 md:pb-40 overflow-hidden"
+        style={{
+          backgroundImage: 'url(/images/hero-image.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
-        <div className="container mx-auto">
+        {/* Dark overlay for readability */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundColor: 'rgba(26, 58, 82, 0.85)',
+            backdropFilter: 'blur(2px)'
+          }}
+        />
+        
+        <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <div className="inline-block px-4 py-2 mb-6 text-sm font-medium rounded-full border"
+            <div className="inline-block px-5 py-2 mb-8 text-sm font-medium tracking-wide uppercase"
               style={{ 
-                borderColor: 'var(--aretion-rust)',
-                color: 'var(--aretion-rust)',
-                backgroundColor: 'rgba(166, 90, 58, 0.05)'
+                borderTop: '1px solid rgba(184, 153, 104, 0.4)',
+                borderBottom: '1px solid rgba(184, 153, 104, 0.4)',
+                color: 'var(--aretion-tan)',
+                backgroundColor: 'rgba(184, 153, 104, 0.08)',
+                letterSpacing: '0.15em'
               }}
             >
               Established 1986 • Strengthened 2025
             </div>
-            <h1 className="mb-6 font-light" style={{ color: 'var(--aretion-navy)' }}>
+            <h1 className="mb-8 font-light" style={{ color: 'var(--aretion-off-white)', lineHeight: '1.2' }}>
               ARETION & Company
             </h1>
-            <p className="text-xl md:text-2xl mb-8 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+            <p className="text-xl md:text-2xl mb-10 leading-relaxed px-4" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               A UK-based group overseeing three specialist entities across informatics, publishing, and healthcare consulting, with active expansion into the Gulf region.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/group-companies"
-                className="px-8 py-4 font-medium rounded transition-all inline-flex items-center space-x-2"
+                className="px-10 py-4 font-medium tracking-wide transition-all inline-flex items-center space-x-2 uppercase text-sm"
                 style={{
-                  backgroundColor: 'var(--aretion-navy)',
-                  color: 'var(--text-light)'
+                  backgroundColor: 'var(--aretion-tan)',
+                  color: 'white',
+                  letterSpacing: '0.1em',
+                  border: '1px solid var(--aretion-tan)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--aretion-steel-blue)';
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = 'var(--aretion-tan)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--aretion-navy)';
+                  e.currentTarget.style.backgroundColor = 'var(--aretion-tan)';
+                  e.currentTarget.style.color = 'white';
                 }}
               >
-                <span>Explore our companies</span>
+                <span>Explore our Companies</span>
                 <ArrowRight size={18} />
               </Link>
               <Link 
                 to="/contact"
-                className="px-8 py-4 font-medium rounded border-2 transition-all"
+                className="px-10 py-4 font-medium tracking-wide border-2 transition-all uppercase text-sm"
                 style={{
-                  borderColor: 'var(--aretion-navy)',
-                  color: 'var(--aretion-navy)',
-                  backgroundColor: 'transparent'
+                  borderColor: 'rgba(255, 255, 255, 0.4)',
+                  color: 'white',
+                  backgroundColor: 'transparent',
+                  letterSpacing: '0.1em'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--aretion-cream)';
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.borderColor = 'white';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)';
                 }}
               >
-                Contact corporate
+                Contact Corporate
               </Link>
             </div>
           </div>
@@ -76,18 +99,27 @@ const Home = () => {
         {/* Subtle decorative element */}
         <div 
           className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ backgroundColor: 'rgba(26, 58, 82, 0.1)' }}
+          style={{ backgroundColor: 'rgba(184, 153, 104, 0.3)' }}
         />
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <section className="py-20 md:py-32" style={{ backgroundColor: 'var(--bg-primary)' }}>
         <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="mb-6" style={{ color: 'var(--aretion-navy)' }}>Group Overview</h2>
-            <p className="text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block mb-4">
+                <div 
+                  className="w-16 h-0.5 mx-auto"
+                  style={{ backgroundColor: 'var(--aretion-rust)' }}
+                />
+              </div>
+              <h2 className="mb-6 font-light tracking-tight" style={{ color: 'var(--aretion-navy)' }}>Group Overview</h2>
+            </div>
+            <p className="text-lg md:text-xl leading-relaxed text-center max-w-3xl mx-auto" style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
               ARETION & Company provides group oversight and governance across its portfolio, 
-              setting standards for quality, responsible conduct, and disciplined execution.
+              establishing rigorous standards for quality assurance, responsible conduct, and disciplined execution 
+              across all operating entities.
             </p>
           </div>
         </div>
