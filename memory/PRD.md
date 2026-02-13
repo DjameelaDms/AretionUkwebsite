@@ -155,10 +155,11 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
 
 ## Next Tasks
 1. ✅ User to review frontend-only website
-2. Take screenshots to verify design and functionality
-3. Upon approval, proceed with backend development
-4. Integrate forms with backend API
-5. Add file upload capability for CVs
+2. ✅ Conditional logo display (orange on homepage, blue elsewhere)
+3. ✅ Loading spinner with company logo
+4. Upon approval, proceed with backend development
+5. Integrate forms with backend API
+6. Add file upload capability for CVs
 
 ## Deferred Items
 - Backend development (awaiting frontend approval)
