@@ -20,12 +20,14 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/images/logo.jpg" 
-                alt="ARETION & Company" 
-                className="h-10 w-auto"
-                style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
-              />
+              <div className="w-12 h-12 flex items-center justify-center" style={{ backgroundColor: 'white', borderRadius: '4px', padding: '6px' }}>
+                <img 
+                  src="/images/logo.jpg" 
+                  alt="ARETION & Company" 
+                  className="w-full h-full"
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
             </div>
             <div className="text-xl font-light mb-4">
               <span style={{ color: 'var(--aretion-off-white)' }}>ARETION</span>
