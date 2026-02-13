@@ -260,8 +260,9 @@ const Footer = () => {
                       Gulf Region
                     </div>
                     <address className="not-italic text-sm" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
+                      Innovation Boulevard, Al Aqeeq<br />
                       King Abdullah Financial District<br />
-                      Riyadh, Saudi Arabia
+                      Building 7229, 13519
                     </address>
                   </div>
                 </div>
