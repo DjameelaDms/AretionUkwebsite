@@ -86,7 +86,9 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
    - Professional footer with company info and offices
    - All navigation links functional
    - **Conditional Logo Display:** Orange/rust logo on homepage, blue logo on all other pages
-   - **Loading Spinner:** Full-screen loading animation with spinning logo on page load
+   - **Loading Spinner:** Full-screen loading animation with subtle pulse/fade effect
+   - **Unified Fonts:** Header and footer use IBM Plex Sans (website body font)
+   - **Footer Styling:** White text, yellow/tan headings, tighter spacing
 
 2. **Pages Created (11 total):**
    - Home (hero, company overview, group companies, initiatives)
