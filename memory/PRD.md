@@ -176,4 +176,4 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
 - Responsive breakpoints: mobile (<768px), tablet (768-1024px), desktop (>1024px)
 
 ---
-**Last Updated:** December 2025
+**Last Updated:** February 2026
