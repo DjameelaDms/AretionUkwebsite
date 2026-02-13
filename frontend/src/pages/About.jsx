@@ -149,6 +149,6 @@ const About = () => {
       </section>
     </div>
   );
-
+};
 
 export default About;
