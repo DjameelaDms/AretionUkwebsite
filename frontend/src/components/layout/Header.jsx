@@ -39,7 +39,8 @@ const Header = () => {
           : 'bg-transparent'
       }`}
       style={{
-        borderBottom: isScrolled ? '1px solid rgba(26, 58, 82, 0.1)' : 'none'
+        borderBottom: isScrolled ? '1px solid rgba(26, 58, 82, 0.1)' : 'none',
+        fontFamily: 'var(--font-body)'
       }}
     >
       <div className="container mx-auto">
