@@ -12,7 +12,7 @@ const Governance = () => {
           style={{
             backgroundImage: 'url(/images/governance-hero.jpg)',
             backgroundSize: 'cover',
-            backgroundPosition: 'center top'
+            backgroundPosition: 'center bottom'
           }}
         >
           <div 
