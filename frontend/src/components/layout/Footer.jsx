@@ -98,7 +98,7 @@ const Footer = () => {
             {navigationSections.map((section, index) => (
               <div key={index}>
                 <h3 
-                  className="text-xs font-semibold uppercase tracking-widest mb-5 pb-2"
+                  className="text-xs font-semibold uppercase tracking-widest pt-1.5 mb-5 pb-2"
                   style={{ 
                     color: 'var(--aretion-tan)',
                     borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
