@@ -77,7 +77,7 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
    - Note: Not a law firm, no legal advice provided
    - Programmes: Nigeria, Cameroon, Kenya
 
-## What's Been Implemented (December 2025)
+## What's Been Implemented (December 2025 - February 2026)
 
 ### ✅ Completed Features
 1. **Layout & Navigation**
@@ -85,6 +85,8 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
    - Mobile-responsive navigation menu
    - Professional footer with company info and offices
    - All navigation links functional
+   - **Conditional Logo Display:** Orange/rust logo on homepage, blue logo on all other pages
+   - **Loading Spinner:** Full-screen loading animation with spinning logo on page load
 
 2. **Pages Created (11 total):**
    - Home (hero, company overview, group companies, initiatives)
