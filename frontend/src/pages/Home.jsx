@@ -12,95 +12,92 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Background Image */}
+      {/* Hero Section with Clear Background Image - No Overlay */}
       <section 
-        className="relative pt-32 pb-32 md:pt-48 md:pb-40 overflow-hidden"
+        className="relative pt-0 pb-0 overflow-hidden"
         style={{
+          height: '85vh',
+          minHeight: '600px',
           backgroundImage: 'url(/images/hero-image.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 35%',
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Dark overlay for readability */}
+        {/* Light gradient for text readability - very subtle */}
         <div 
           className="absolute inset-0"
           style={{
-            backgroundColor: 'rgba(26, 58, 82, 0.85)',
-            backdropFilter: 'blur(2px)'
+            background: 'linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(26, 58, 82, 0.75) 100%)'
           }}
         />
         
-        <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <div className="inline-block px-5 py-2 mb-8 text-sm font-medium tracking-wide uppercase"
+        <div className="container mx-auto h-full flex items-end pb-20 relative z-10">
+          <div className="max-w-3xl animate-fade-in">
+            <div className="inline-block px-4 py-2 mb-6 text-xs font-medium tracking-widest uppercase"
               style={{ 
-                borderTop: '1px solid rgba(184, 153, 104, 0.4)',
-                borderBottom: '1px solid rgba(184, 153, 104, 0.4)',
-                color: 'var(--aretion-tan)',
-                backgroundColor: 'rgba(184, 153, 104, 0.08)',
+                borderLeft: '3px solid var(--aretion-tan)',
+                paddingLeft: '1rem',
+                color: 'white',
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                backdropFilter: 'blur(10px)',
                 letterSpacing: '0.15em'
               }}
             >
-              Established 1986 • Strengthened 2025
+              Established 1986
             </div>
-            <h1 className="mb-8 font-light" style={{ color: 'var(--aretion-off-white)', lineHeight: '1.2' }}>
+            <h1 className="mb-6" style={{ color: 'white', lineHeight: '1.1', fontWeight: 300 }}>
               ARETION & Company
             </h1>
-            <p className="text-xl md:text-2xl mb-10 leading-relaxed px-4" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-              A UK-based group overseeing three specialist entities across informatics, publishing, and healthcare consulting, with active expansion into the Gulf region.
+            <p className="text-xl md:text-2xl mb-8 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)', maxWidth: '600px', lineHeight: '1.6' }}>
+              A UK-based group overseeing specialist entities in informatics, publishing, and healthcare consulting
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/group-companies"
-                className="px-10 py-4 font-medium tracking-wide transition-all inline-flex items-center space-x-2 uppercase text-sm"
+                className="px-8 py-4 font-medium transition-all inline-flex items-center space-x-2 text-sm"
                 style={{
-                  backgroundColor: 'var(--aretion-tan)',
-                  color: 'white',
-                  letterSpacing: '0.1em',
-                  border: '1px solid var(--aretion-tan)'
+                  backgroundColor: 'white',
+                  color: 'var(--aretion-navy)',
+                  letterSpacing: '0.05em',
+                  border: '1px solid white'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.color = 'var(--aretion-tan)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--aretion-tan)';
+                  e.currentTarget.style.backgroundColor = 'var(--aretion-navy)';
                   e.currentTarget.style.color = 'white';
                 }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'white';
+                  e.currentTarget.style.color = 'var(--aretion-navy)';
+                }}
               >
-                <span>Explore our Companies</span>
-                <ArrowRight size={18} />
+                <span>Our Companies</span>
+                <ArrowRight size={16} />
               </Link>
               <Link 
                 to="/contact"
-                className="px-10 py-4 font-medium tracking-wide border-2 transition-all uppercase text-sm"
+                className="px-8 py-4 font-medium border transition-all text-sm"
                 style={{
-                  borderColor: 'rgba(255, 255, 255, 0.4)',
+                  borderColor: 'rgba(255, 255, 255, 0.6)',
                   color: 'white',
-                  backgroundColor: 'transparent',
-                  letterSpacing: '0.1em'
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(10px)',
+                  letterSpacing: '0.05em'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
                   e.currentTarget.style.borderColor = 'white';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)';
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
                 }}
               >
-                Contact Corporate
+                Contact
               </Link>
             </div>
           </div>
         </div>
-
-        {/* Subtle decorative element */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ backgroundColor: 'rgba(184, 153, 104, 0.3)' }}
-        />
       </section>
 
       {/* Overview Section */}
