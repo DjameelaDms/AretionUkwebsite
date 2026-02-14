@@ -6,7 +6,7 @@ export const groupCompanies = [
     name: "ARETION Informatics Solutions",
     tagline: "Health Information Systems (HIS)",
     description: "Design and delivery support for HIS and healthcare digital platforms.",
-    link: "https://informatics.aretion.org",
+    link: "https://informatics.aretion.co.uk",
     icon: "Database"
   },
   {
@@ -14,7 +14,7 @@ export const groupCompanies = [
     name: "ARETION Publishing Group",
     tagline: "Medicine, Law & Public Health",
     description: "Publishing across medicine, law and public health, with emphasis on editorial governance and research integrity.",
-    link: "https://publishing.aretion.org",
+    link: "https://publishing.aretion.co.uk",
     icon: "BookOpen"
   },
   {
