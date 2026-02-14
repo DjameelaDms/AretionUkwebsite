@@ -22,7 +22,7 @@ export const groupCompanies = [
     name: "ARETION Healthcare Consulting",
     tagline: "Governance & Medical Law Research",
     description: "Advisory and project support across healthcare governance and medical law research themes.",
-    link: "https://healthcare.aretion.org",
+    link: "https://Aretion.org",
     icon: "Stethoscope"
   }
 ];
