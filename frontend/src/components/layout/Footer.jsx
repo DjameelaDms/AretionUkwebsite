@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, ChevronDown, ChevronUp, Globe } from 'lucide-react';
+import { useLegalModals } from '../LegalModals';
 
 const Footer = () => {
   const [expandedSection, setExpandedSection] = useState(null);
   const [language, setLanguage] = useState('EN');
+  const { openPrivacy, openTerms, openCodeOfConduct, LegalModals } = useLegalModals();
 
   const toggleSection = (section) => {
     setExpandedSection(expandedSection === section ? null : section);
@@ -39,14 +41,6 @@ const Footer = () => {
         { label: 'Media Enquiries', path: '/contact#media' },
       ]
     }
-  ];
-
-  const legalLinks = [
-    { label: 'Privacy Notice', path: '/privacy' },
-    { label: 'Terms of Use', path: '/terms' },
-    { label: 'Cookie Policy', path: '/cookies' },
-    { label: 'Accessibility', path: '/accessibility' },
-    { label: 'Modern Slavery Statement', path: '/modern-slavery' },
   ];
 
   return (
