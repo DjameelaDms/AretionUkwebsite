@@ -93,6 +93,18 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
    - **Loading Spinner:** Full-screen loading animation with subtle pulse/fade effect
    - **Unified Fonts:** Header and footer use IBM Plex Sans (website body font)
 
+2. **Standards & Policies Page - Modal System (Feb 2026)**
+   - Removed obsolete tabs: "Modern Slavery Statement" and "Speak up policy"
+   - Implemented modal pop-ups for 5 policy documents:
+     - Conflicts of Interest Policy
+     - Privacy Notice (UK GDPR)
+     - Information Security and Confidentiality
+     - Publishing Ethics and Peer Review
+     - Complaints Handling Policy
+   - Content sourced from user-provided DOCX documents
+   - Consistent font styling with IBM Plex Sans
+   - Responsive modal design with escape key and click-outside-to-close support
+
 2. **Pages Created (11 total):**
    - Home (hero, company overview, group companies, initiatives)
    - About (history, milestones, operations)
