@@ -304,6 +304,16 @@ const Footer = () => {
               >
                 Code of Conduct
               </button>
+              <button
+                onClick={openAntiBribery}
+                className="text-xs transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white/30 rounded px-1 cursor-pointer"
+                style={{ color: 'rgba(255, 255, 255, 0.6)', background: 'none', border: 'none' }}
+                onMouseEnter={(e) => e.target.style.color = 'white'}
+                onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.6)'}
+                data-testid="footer-antibribery-btn"
+              >
+                Anti-Bribery Policy
+              </button>
             </nav>
 
             {/* Language & Social */}
