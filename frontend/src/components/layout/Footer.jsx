@@ -354,6 +354,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
+      {/* Legal Modals */}
+      <LegalModals />
     </footer>
   );
 };
