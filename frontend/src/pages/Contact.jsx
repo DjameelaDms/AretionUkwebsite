@@ -122,7 +122,7 @@ const Contact = () => {
                   className="text-lg hover:underline"
                   style={{ color: 'var(--aretion-steel-blue)' }}
                 >
-                  contact@aretion.org
+                  post@aretion.co.uk
                 </a>
               </div>
 
