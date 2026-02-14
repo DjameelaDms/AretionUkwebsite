@@ -277,18 +277,33 @@ const Footer = () => {
 
             {/* Legal Links */}
             <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Legal links">
-              {legalLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.path}
-                  className="text-xs transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white/30 rounded px-1"
-                  style={{ color: 'rgba(255, 255, 255, 0.6)' }}
-                  onMouseEnter={(e) => e.target.style.color = 'white'}
-                  onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.6)'}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <button
+                onClick={openPrivacy}
+                className="text-xs transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white/30 rounded px-1 cursor-pointer"
+                style={{ color: 'rgba(255, 255, 255, 0.6)', background: 'none', border: 'none' }}
+                onMouseEnter={(e) => e.target.style.color = 'white'}
+                onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.6)'}
+              >
+                Privacy Notice
+              </button>
+              <button
+                onClick={openTerms}
+                className="text-xs transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white/30 rounded px-1 cursor-pointer"
+                style={{ color: 'rgba(255, 255, 255, 0.6)', background: 'none', border: 'none' }}
+                onMouseEnter={(e) => e.target.style.color = 'white'}
+                onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.6)'}
+              >
+                Terms of Use
+              </button>
+              <button
+                onClick={openCodeOfConduct}
+                className="text-xs transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white/30 rounded px-1 cursor-pointer"
+                style={{ color: 'rgba(255, 255, 255, 0.6)', background: 'none', border: 'none' }}
+                onMouseEnter={(e) => e.target.style.color = 'white'}
+                onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.6)'}
+              >
+                Code of Conduct
+              </button>
             </nav>
 
             {/* Language & Social */}
