@@ -1,10 +1,47 @@
 import React from 'react';
-import { policiesAndStandards } from '../mock/mockData';
 import { FileText } from 'lucide-react';
+import { usePolicyModals } from '../components/PolicyModals';
+
+// Define the policies with their modal handlers
+const policiesConfig = [
+  { name: 'Conflicts of Interest', modalKey: 'conflicts' },
+  { name: 'Privacy Notice (UK GDPR)', modalKey: 'privacy' },
+  { name: 'Information Security and Confidentiality', modalKey: 'security' },
+  { name: 'Publishing Ethics and Peer Review', modalKey: 'publishing' },
+  { name: 'Complaints Handling', modalKey: 'complaints' },
+];
 
 const Standards = () => {
+  const { 
+    openConflictsOfInterest, 
+    openPrivacyNotice, 
+    openInformationSecurity, 
+    openComplaintsHandling, 
+    openPublishingEthics, 
+    PolicyModals 
+  } = usePolicyModals();
+
+  // Map modal keys to their handlers
+  const modalHandlers = {
+    conflicts: openConflictsOfInterest,
+    privacy: openPrivacyNotice,
+    security: openInformationSecurity,
+    publishing: openPublishingEthics,
+    complaints: openComplaintsHandling,
+  };
+
+  const handlePolicyClick = (modalKey) => {
+    const handler = modalHandlers[modalKey];
+    if (handler) {
+      handler();
+    }
+  };
+
   return (
     <div className="min-h-screen pt-24">
+      {/* Policy Modals */}
+      <PolicyModals />
+
       {/* Hero with Image */}
       <section className="relative min-h-[400px] md:min-h-[500px] flex items-center">
         {/* Background Image */}
@@ -56,11 +93,13 @@ const Standards = () => {
               Our Policies
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {policiesAndStandards.map((policy, index) => (
-                <div 
+              {policiesConfig.map((policy, index) => (
+                <button
                   key={index}
-                  className="bg-white rounded-lg p-6 border transition-all hover:shadow-md cursor-pointer group"
+                  onClick={() => handlePolicyClick(policy.modalKey)}
+                  className="bg-white rounded-lg p-6 border transition-all hover:shadow-md cursor-pointer group text-left w-full"
                   style={{ borderColor: 'rgba(26, 58, 82, 0.08)' }}
+                  data-testid={`policy-card-${policy.modalKey}`}
                 >
                   <div className="flex items-start space-x-4">
                     <div 
@@ -77,14 +116,14 @@ const Standards = () => {
                         className="font-semibold mb-1 group-hover:underline transition-all" 
                         style={{ color: 'var(--aretion-navy)' }}
                       >
-                        {policy}
+                        {policy.name}
                       </h3>
                       <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
                         View policy document
                       </p>
                     </div>
                   </div>
-                </div>
+                </button>
               ))}
             </div>
           </div>
@@ -150,6 +189,7 @@ const Standards = () => {
                 e.currentTarget.style.backgroundColor = 'white';
                 e.currentTarget.style.color = 'var(--aretion-navy)';
               }}
+              data-testid="contact-email-btn"
             >
               post@aretion.co.uk
             </a>
