@@ -118,7 +118,7 @@ const Contact = () => {
                   </h3>
                 </div>
                 <a 
-                  href="mailto:contact@aretion.org"
+                  href="mailto:post@aretion.co.uk"
                   className="text-lg hover:underline"
                   style={{ color: 'var(--aretion-steel-blue)' }}
                 >
