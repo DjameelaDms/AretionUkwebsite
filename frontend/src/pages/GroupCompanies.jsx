@@ -229,7 +229,7 @@ const GroupCompanies = () => {
                   </ul>
                 </div>
                 <a
-                  href="https://healthcare.aretion.org"
+                  href="https://Aretion.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 px-6 py-3 font-medium rounded border-2 transition-all"
@@ -247,7 +247,7 @@ const GroupCompanies = () => {
                     e.currentTarget.style.color = 'var(--aretion-navy)';
                   }}
                 >
-                  <span>Visit healthcare.aretion.org</span>
+                  <span>Visit Aretion.org</span>
                   <ExternalLink size={16} />
                 </a>
               </div>
