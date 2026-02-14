@@ -62,9 +62,18 @@ const Governance = () => {
                   <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--aretion-navy)' }}>
                     {member.name}
                   </h3>
-                  <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                  <p className="text-sm mb-2" style={{ color: 'var(--text-secondary)' }}>
                     {member.role}
                   </p>
+                  {member.email && (
+                    <a 
+                      href={`mailto:${member.email}`}
+                      className="text-sm transition-colors hover:underline"
+                      style={{ color: 'var(--aretion-steel-blue)' }}
+                    >
+                      {member.email}
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
