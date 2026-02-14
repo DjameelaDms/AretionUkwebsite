@@ -653,10 +653,28 @@ export const usePolicyModals = () => {
   const openInformationSecurity = () => setActiveModal('security');
   const openComplaintsHandling = () => setActiveModal('complaints');
   const openPublishingEthics = () => setActiveModal('publishing');
+  const openAntiBribery = () => setActiveModal('antibribery');
+  const openCodeOfConduct = () => setActiveModal('code');
   const closeModal = () => setActiveModal(null);
 
   const PolicyModals = () => (
     <>
+      <PolicyModal 
+        isOpen={activeModal === 'antibribery'} 
+        onClose={closeModal} 
+        title="Anti-Bribery and Anti-Corruption Policy"
+      >
+        <AntiBriberyContent />
+      </PolicyModal>
+      
+      <PolicyModal 
+        isOpen={activeModal === 'code'} 
+        onClose={closeModal} 
+        title="Code of Conduct"
+      >
+        <CodeOfConductContent />
+      </PolicyModal>
+      
       <PolicyModal 
         isOpen={activeModal === 'conflicts'} 
         onClose={closeModal} 
@@ -704,7 +722,9 @@ export const usePolicyModals = () => {
     openPrivacyNotice, 
     openInformationSecurity, 
     openComplaintsHandling, 
-    openPublishingEthics, 
+    openPublishingEthics,
+    openAntiBribery,
+    openCodeOfConduct,
     closeModal,
     PolicyModals 
   };
