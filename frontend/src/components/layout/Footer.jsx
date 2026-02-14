@@ -6,7 +6,7 @@ import { useLegalModals } from '../LegalModals';
 const Footer = () => {
   const [expandedSection, setExpandedSection] = useState(null);
   const [language, setLanguage] = useState('EN');
-  const { openPrivacy, openTerms, openCodeOfConduct, LegalModals } = useLegalModals();
+  const { openPrivacy, openTerms, openCodeOfConduct, openAntiBribery, LegalModals } = useLegalModals();
 
   const toggleSection = (section) => {
     setExpandedSection(expandedSection === section ? null : section);
