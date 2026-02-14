@@ -85,15 +85,11 @@ export const leadershipTeam = [
 ];
 
 export const policiesAndStandards = [
-  "Code of Conduct",
-  "Anti-bribery and Corruption",
   "Conflicts of Interest",
-  "Speak Up Policy",
   "Privacy Notice (UK GDPR)",
   "Information Security and Confidentiality",
   "Publishing Ethics and Peer Review",
-  "Complaints Handling",
-  "Modern Slavery Statement"
+  "Complaints Handling"
 ];
 
 export const milestones = [
