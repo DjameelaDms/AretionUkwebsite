@@ -156,7 +156,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-8">
-                  <h4 className="mb-3 font-light" style={{ color: 'var(--aretion-navy)' }}>Global Reach</h4>
+                  <h4 className="mb-3 font-light" style={{ color: 'var(--aretion-navy)' }}>Cross-Border Reach</h4>
                   <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                     Whilst rooted in the UK, our work extends internationally with expansion into the Gulf region.
                   </p>
