@@ -60,7 +60,7 @@ const About = () => {
             <h2 className="mb-6 font-light" style={{ color: 'var(--aretion-navy)' }}>Our History</h2>
             <div className="space-y-6 text-lg leading-relaxed" style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
               <p>
-                The concept for ARETION & Company was born in 1986, rooted in a vision to provide specialist expertise across 
+                The concept for ARETION & Company was rooted in a vision to provide specialist expertise across 
                 critical sectors of healthcare and research. What began as a small team providing independent support to 
                 healthcare organisations has evolved into a comprehensive group encompassing data and digital health, 
                 specialist publishing and strategic consulting.
