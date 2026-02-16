@@ -59,8 +59,13 @@ export const leadershipTeam = [
   },
   {
     name: "Michael Bennett",
-    role: "Chief Technology Officer",
+    role: "Chief Technology Officer, Europe",
     email: "mbennett@aretion.co.uk"
+  },
+  {
+    name: "Rizq Badawi",
+    role: "Chief Technology Officer, Middle East & North Africa",
+    email: "rbadawi@aretion.co.uk"
   },
   {
     name: "David Thompson",
