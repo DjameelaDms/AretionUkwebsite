@@ -25,7 +25,6 @@ const Header = () => {
     { path: '/group-companies', label: 'Group Companies' },
     { path: '/governance', label: 'Governance & Leadership' },
     { path: '/standards', label: 'Standards & Policies' },
-    { path: '/newsroom', label: 'Newsroom' },
     { path: '/careers', label: 'Careers' },
     { path: '/contact', label: 'Contact' }
   ];
