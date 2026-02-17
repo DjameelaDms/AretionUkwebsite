@@ -8,7 +8,6 @@ import About from './pages/About';
 import GroupCompanies from './pages/GroupCompanies';
 import Governance from './pages/Governance';
 import Standards from './pages/Standards';
-import Newsroom from './pages/Newsroom';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import { Toaster } from './components/ui/sonner';
@@ -28,7 +27,6 @@ function App() {
             <Route path="/group-companies" element={<GroupCompanies />} />
             <Route path="/governance" element={<Governance />} />
             <Route path="/standards" element={<Standards />} />
-            <Route path="/newsroom" element={<Newsroom />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
