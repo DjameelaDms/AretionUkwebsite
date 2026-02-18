@@ -596,15 +596,49 @@ const ComplaintsHandlingContent = () => (
   </div>
 );
 
-// Publishing Ethics and Peer Review Content
+// Publishing Ethics and Peer Review Content (Full Document)
 const PublishingEthicsContent = () => (
   <div className="prose prose-sm max-w-none" style={{ fontFamily: 'var(--font-body)' }}>
     <p className="text-sm text-gray-500 mb-4">Last updated: 14 Feb 2026</p>
     
-    <p>Journal of Medicine, Law & Public Health (JMLPH) — Published by ARETION Publishing Group</p>
+    <p><strong>Journal of Medicine, Law & Public Health (JMLPH)</strong><br />Published by ARETION Publishing Group</p>
+
+    <h3>Table of Contents</h3>
+    <ol className="text-sm mb-6">
+      <li>Introduction and Scope</li>
+      <li>About ARETION Publishing Group and JMLPH</li>
+      <li>Legal and Regulatory Framework</li>
+      <li>Open Access, Publication Charges, and Copyright</li>
+      <li>Editorial and Archiving Policies</li>
+      <li>Originality, Authorship, and Affiliations</li>
+      <li>Handling Papers Authored by Editorial Board Members</li>
+      <li>Peer Review Policy</li>
+      <li>Ethical Guidance for Reviewers</li>
+      <li>Ethical Guidance for the Editorial Team</li>
+      <li>Redundant or Duplicate Publications and Reuse</li>
+      <li>Copyediting, Production, and Metadata</li>
+      <li>Conflicts of Interest</li>
+      <li>Scientific Integrity, Misconduct, and Ethics</li>
+      <li>Plagiarism and Overlap Policy</li>
+      <li>Preprint Policy</li>
+      <li>Retraction and Correction Policies</li>
+      <li>Explicit Jurisdiction Framing</li>
+      <li>Appeals, Complaints, and Advertising</li>
+      <li>Complaint Policy with a Broader Perspective</li>
+      <li>Use of Artificial Intelligence (AI) Tools</li>
+      <li>Data Protection and Privacy Policy</li>
+      <li>Governance and Updates</li>
+    </ol>
 
     <h3>1. Introduction and Scope</h3>
-    <p>This Publishing Policy sets out the standards, procedures, and ethical principles that govern the publication of scholarly work in the Journal of Medicine, Law & Public Health (JMLPH). It applies to all stakeholders involved in the publication process, including authors, reviewers, editors, readers, institutions, and the publisher.</p>
+    <p>This Publishing Policy sets out the standards, procedures, and ethical principles that govern the publication of scholarly work in the Journal of Medicine, Law & Public Health (JMLPH). It applies to all stakeholders involved in the publication process, including authors, reviewers, editors, readers, institutions, and the publisher. The policy is designed to:</p>
+    <ul>
+      <li>Ensure the highest standards of research integrity, publication ethics, and editorial independence</li>
+      <li>Provide clear guidance on author, reviewer, and editor responsibilities</li>
+      <li>Protect the rights and interests of research participants, authors, and the academic community</li>
+      <li>Maintain transparency, accountability, and compliance with applicable laws and professional standards</li>
+      <li>Support open access to scientific knowledge</li>
+    </ul>
     <p>This policy is consistent with internationally recognised standards and guidance from:</p>
     <ul>
       <li>International Committee of Medical Journal Editors (ICMJE)</li>
@@ -614,62 +648,167 @@ const PublishingEthicsContent = () => (
     </ul>
 
     <h3>2. About ARETION Publishing Group and JMLPH</h3>
-    <p>The Journal of Medicine, Law & Public Health (JMLPH) is published by ARETION Publishing Group, a subsidiary of ARETION & Company. JMLPH publishes high-quality, peer-reviewed research at the intersection of medicine, law, and public health.</p>
-    <p>The journal welcomes original research articles, reviews, case studies, policy analyses, and commentary that advance understanding of healthcare law and regulation, medical ethics, public health law and policy, and health systems governance.</p>
-
-    <h3>3. Editorial Independence</h3>
-    <p>JMLPH maintains strict editorial independence. Editorial decisions are based solely on scientific merit, methodological quality, ethical standards, and relevance to the journal's scope. The journal does not accept advertising of any kind and is free from commercial influence.</p>
-
-    <h3>4. Open Access and Copyright</h3>
-    <p>JMLPH promotes unrestricted access to scientific research and encourages authors to publish under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Authors retain copyright to their work and grant JMLPH the right of first publication.</p>
-    <p><strong>Publication charges:</strong></p>
+    <h4>2.1 Publisher Identity</h4>
+    <p>The Journal of Medicine, Law & Public Health (JMLPH) is published by ARETION Publishing Group as of 2026, a subsidiary of ARETION & Company. ARETION & Company operates through three principal subsidiaries:</p>
     <ul>
-      <li>For articles submitted before 1 June 2026: No publication fees, submission charges, or APCs</li>
-      <li>For articles submitted on or after 1 June 2026: A publication charge of £70 applies to accepted articles</li>
-      <li>Authors affiliated with institutions in low-income countries are automatically exempt from publication charges</li>
+      <li><strong>ARETION Informatics Solutions</strong> – providing health information technology, digital solutions, data platforms, data analytics, and technology-enabled consulting to healthcare organisations</li>
+      <li><strong>ARETION Publishing Group</strong> – producing healthcare publications, research, evidence synthesis, policy analysis, and knowledge dissemination to advance healthcare practice and policy</li>
+      <li><strong>ARETION Healthcare Consulting</strong> – delivering strategy consulting, operational improvement, workforce development, clinical pathway redesign, digital health implementation, and advisory services to healthcare providers, commissioners, and systems</li>
     </ul>
 
-    <h3>5. Originality and Authorship</h3>
-    <p>Submissions must be original, not previously published or under review elsewhere. Each author must have:</p>
+    <h4>2.2 Journal Mission and Scope</h4>
+    <p>JMLPH publishes high-quality, peer-reviewed research at the intersection of medicine, law, and public health. The journal welcomes original research articles, reviews, case studies, policy analyses, and commentary that advance understanding of:</p>
     <ul>
-      <li>Made a significant contribution to the conception, design, execution, or interpretation of the research</li>
-      <li>Approved the final version for publication</li>
-      <li>Accepted responsibility and ability to publicly defend the work</li>
+      <li>Healthcare law and regulation</li>
+      <li>Medical ethics and bioethics</li>
+      <li>Public health law and policy</li>
+      <li>Health systems governance</li>
+      <li>Patient rights and healthcare access</li>
+      <li>Legal and ethical aspects of medical practice</li>
+      <li>Health equity and social determinants of health</li>
+      <li>Global health law and comparative health systems</li>
     </ul>
 
-    <h3>6. Peer Review Policy</h3>
-    <p>JMLPH uses a rigorous double-blind peer review process for all manuscripts. Key stages:</p>
+    <h4>2.3 Editorial Independence</h4>
+    <p>JMLPH maintains strict editorial independence. Editorial decisions are based solely on scientific merit, methodological quality, ethical standards, and relevance to the journal's scope. The journal does not accept advertising of any kind and is free from commercial influence. ARETION Publishing Group supports the editorial team but does not interfere with editorial decisions. The Editor-in-Chief and editorial board retain full autonomy over content, peer review, and publication decisions.</p>
+
+    <h3>3. Legal and Regulatory Framework</h3>
+    <h4>3.1 Primary Jurisdiction: United Kingdom</h4>
+    <p>ARETION Publishing Group and JMLPH operate under the laws of England and Wales as the primary legal framework. This includes compliance with:</p>
     <ul>
-      <li>Initial editorial assessment and triage</li>
-      <li>Reviewer identification and assignment (at least two independent experts)</li>
-      <li>Comprehensive manuscript evaluation</li>
-      <li>Author revisions</li>
-      <li>Editorial decision</li>
+      <li>UK General Data Protection Regulation (UK GDPR) and Data Protection Act 2018</li>
+      <li>Copyright, Designs and Patents Act 1988</li>
+      <li>Equality Act 2010</li>
+      <li>Human Rights Act 1998</li>
+      <li>Defamation Act 2013</li>
+      <li>Computer Misuse Act 1990</li>
+      <li>Common law principles governing contract, tort, and intellectual property</li>
     </ul>
-    <p><strong>Peer Review Timelines:</strong></p>
+
+    <h4>3.2 Gulf Region Context</h4>
+    <p>JMLPH operates internationally and works with authors, reviewers, editors, and institutions in the Gulf region, including Saudi Arabia, United Arab Emirates, Qatar, Kuwait, Bahrain, and Oman. The journal recognises and respects applicable legal, ethical, and professional frameworks in Gulf countries.</p>
+
+    <h4>3.3 Harmonisation and Compliance</h4>
+    <p>Where research involves multiple jurisdictions, authors must clearly indicate the jurisdiction(s) in which research was conducted, confirm compliance with applicable ethics approvals, data protection laws, and regulatory requirements in all relevant jurisdictions, and describe any jurisdiction-specific constraints on data sharing, publication, or participant consent.</p>
+
+    <h3>4. Open Access, Publication Charges, and Copyright</h3>
+    <h4>4.1 Open Access Policy</h4>
+    <p>JMLPH promotes unrestricted access to scientific research and encourages authors to publish under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Users may read, download, distribute, copy, and link to full-text articles with proper attribution.</p>
+
+    <h4>4.2 Publication Charge Policy</h4>
+    <p><strong>For articles submitted before 1 June 2026:</strong> JMLPH does not charge publication fees, submission charges, peer review fees, or Article Processing Charges (APCs).</p>
+    <p><strong>For articles submitted on or after 1 June 2026:</strong> JMLPH does not charge submission or peer review fees. However, a publication charge of £70 will apply to accepted articles only.</p>
+    <p><strong>Exemptions:</strong> Authors affiliated with institutions in low-income and lower-middle-income countries, as classified by the World Bank, are automatically exempt from publication charges.</p>
+
+    <h4>4.3 Copyright and Licensing</h4>
+    <p>Authors retain copyright to their work and grant JMLPH the right of first publication and the right to share, reproduce, and distribute the work worldwide without fees. Under the CC BY 4.0 licence, authors and users may share (copy and redistribute the material) and adapt (remix, transform, and build upon the material for any purpose, including commercial uses).</p>
+
+    <h3>5. Editorial and Archiving Policies</h3>
+    <h4>5.1 Editorial Policy and Ethical Framework</h4>
+    <p>JMLPH upholds ethical conduct and scientific integrity, following ICMJE Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals. JMLPH does not accept advertising of any kind and maintains strict editorial independence from commercial interests.</p>
+
+    <h4>5.2 Editorial Governance</h4>
+    <ul>
+      <li><strong>Editor-in-Chief:</strong> Holds final responsibility for all editorial decisions, ensures compliance with publication ethics and policies</li>
+      <li><strong>Editorial Board:</strong> Provides expert guidance on journal scope and standards, handles manuscripts in their areas of expertise</li>
+      <li><strong>Editorial Office:</strong> Manages submissions, correspondence, and production workflow</li>
+    </ul>
+
+    <h4>5.3 Archiving and Preservation</h4>
+    <p>To ensure long-term preservation and accessibility, JMLPH uses LOCKSS, CLOCKSS, Internet Archive, and Open Journal Systems (OJS) to manage submissions, peer review, publication workflows, and metadata.</p>
+
+    <h3>6. Originality, Authorship, and Affiliations</h3>
+    <h4>6.1 Originality and Reporting Standards</h4>
+    <p>Submissions must be original, not previously published or under review elsewhere, report methods and findings accurately with sufficient detail for reproducibility, and avoid overstatement or misinterpretation of results.</p>
+
+    <h4>6.2 Authorship Criteria</h4>
+    <p>Each author must have made a significant contribution to the conception, design, execution, or interpretation of the research, approved the final version for publication, and accepted responsibility and ability to publicly defend the work.</p>
+
+    <h4>6.3 Affiliations and Impartiality</h4>
+    <p>Authors should include only essential affiliations directly relevant to the research. To promote impartiality, do not include academic ranks, professional memberships, managerial positions, or honorary titles.</p>
+
+    <h3>7. Handling Papers Authored by Editorial Board Members</h3>
+    <p>JMLPH is committed to avoiding real or perceived conflicts of interest in the editorial evaluation of manuscripts authored by members of its editorial board. Any editor who is an author of a submitted manuscript must not participate in any part of the editorial decision-making for that manuscript. The manuscript will be assigned to an independent handling editor who has no conflicts of interest.</p>
+
+    <h3>8. Peer Review Policy</h3>
+    <h4>8.1 Process and Structure</h4>
+    <p>JMLPH uses a rigorous double-blind peer review process for all manuscripts. Key stages include:</p>
+    <ul>
+      <li><strong>Initial Editorial Assessment:</strong> Check scope, originality, formatting, and ethics</li>
+      <li><strong>Reviewer Assignment:</strong> At least two independent experts with relevant subject expertise</li>
+      <li><strong>Manuscript Evaluation:</strong> Reviewers assess conceptual innovation, methodological robustness, structural organisation, and research ethics</li>
+      <li><strong>Author Revisions:</strong> Authors respond systematically to each comment</li>
+      <li><strong>Editorial Decision:</strong> Accept, conditional accept, or reject</li>
+    </ul>
+
+    <h4>8.2 Peer Review Timelines</h4>
     <ul>
       <li>Initial editorial assessment: typically 5–7 working days</li>
       <li>Peer review: typically 3–4 weeks</li>
       <li>Editorial decision: typically 1–2 weeks after receiving reviewer reports</li>
+      <li>Revision deadlines: typically 30–60 days</li>
     </ul>
 
-    <h3>7. Ethical Standards</h3>
-    <p>All articles undergo rigorous peer review. Fabrication, falsification, or modification of data is strictly prohibited. Studies involving humans, animals, or sensitive data require prior ethics committee approval. Authors must obtain informed consent for human participants and protect privacy.</p>
+    <h3>9. Ethical Guidance for Reviewers</h3>
+    <p>Reviewers must provide objective, evidence-based, constructive assessments. They must treat manuscripts as confidential, declare any conflicts of interest, focus criticism on the work (not individuals), and report suspected misconduct to the editor.</p>
 
-    <h3>8. Conflicts of Interest</h3>
-    <p>Authors must disclose all actual, potential, or perceived conflicts of interest, including financial interests, research funding sources, and personal or professional relationships. COI declarations must be included in manuscripts at submission.</p>
+    <h3>10. Ethical Guidance for the Editorial Team</h3>
+    <p>Editors make decisions independently of sponsors or institutions, base decisions on scientific merit, maintain confidentiality of manuscripts and reviewer identities, and follow COPE guidance for allegations of misconduct.</p>
 
-    <h3>9. Retraction and Correction Policies</h3>
-    <p>JMLPH follows COPE Retraction Guidelines. Retractions occur in cases of:</p>
+    <h3>11. Redundant or Duplicate Publications and Reuse</h3>
+    <p>Authors must not submit manuscripts that substantially overlap with already-published work. When reusing previously published material, authors must obtain all necessary permissions and clearly attribute the original source.</p>
+
+    <h3>12. Copyediting, Production, and Metadata</h3>
+    <p>After acceptance, manuscripts proceed through copyediting, typesetting and proofreading, DOI assignment and metadata preparation, and online publication.</p>
+
+    <h3>13. Conflicts of Interest</h3>
+    <p>Authors must disclose all actual, potential, or perceived conflicts of interest, including financial interests, research funding sources, personal or professional relationships, and institutional affiliations that could create bias. COI declarations must be included in manuscripts at submission.</p>
+
+    <h3>14. Scientific Integrity, Misconduct, and Ethics</h3>
+    <p>Fabrication, falsification, or modification of data is strictly prohibited. Studies involving humans, animals, or sensitive data require prior ethics committee approval. Authors must obtain informed consent for human participants and protect privacy. Research involving animals must comply with ARRIVE guidelines.</p>
+
+    <h3>15. Plagiarism and Overlap Policy</h3>
+    <p>Plagiarism includes verbatim copying without quotation and citation, close paraphrasing without proper attribution, self-plagiarism, unacknowledged use of others' ideas, and image/data plagiarism. Submissions are screened using tools such as Grammarly and Turnitin. Serious offences may result in submission bans and institutional notification.</p>
+
+    <h3>16. Preprint Policy</h3>
+    <p>JMLPH supports the use of preprint servers (e.g., arXiv, bioRxiv, medRxiv, SSRN). Posting to preprint servers does not constitute prior publication and will not affect consideration by JMLPH.</p>
+
+    <h3>17. Retraction and Correction Policies</h3>
+    <p>JMLPH follows COPE Retraction Guidelines. Retractions occur in cases of proven misconduct, significant errors or inaccuracies, ethical violations, duplicate publication, or unresolved authorship disputes.</p>
+    <p><strong>Types of notices:</strong></p>
     <ul>
-      <li>Proven misconduct (plagiarism, data fabrication, manipulation)</li>
-      <li>Significant errors that undermine validity</li>
-      <li>Ethical violations</li>
-      <li>Duplicate publication</li>
+      <li><strong>Erratum:</strong> Journal/publisher errors</li>
+      <li><strong>Corrigendum:</strong> Author-originated errors</li>
+      <li><strong>Addendum:</strong> Additional information</li>
+      <li><strong>Expression of Concern:</strong> Pending investigation</li>
+      <li><strong>Retraction:</strong> Confirmed misconduct or invalidating errors</li>
     </ul>
 
-    <h3>10. Contact</h3>
-    <p>Editorial enquiries: Editorial.Board@JMLPH.net</p>
+    <h3>18. Explicit Jurisdiction Framing</h3>
+    <p>JMLPH operates under the laws of England and Wales as its primary legal framework and collaborates internationally, particularly across the Gulf region. Where conflicts arise between jurisdictional requirements, the journal will prioritise participant safety, privacy, and research integrity.</p>
+
+    <h3>19. Appeals, Complaints, and Advertising</h3>
+    <p>Authors may appeal revision or rejection decisions only after peer review (not desk rejections). Appeals must be submitted within 30 days of the decision. Only one appeal is permitted per manuscript; the final decision after appeal is conclusive.</p>
+
+    <h3>20. Complaint Policy</h3>
+    <p>JMLPH views complaints as opportunities to improve quality, transparency, and trust. Complaints may relate to editorial decisions, peer review, authorship, research ethics, patient safety, legal or public health implications, conflicts of interest, or alleged misconduct.</p>
+    <p><strong>Principles:</strong> Accessibility, fairness and impartiality, confidentiality, timeliness (acknowledgement within 1–2 working days, substantive response within approximately 30 days).</p>
+
+    <h3>21. Use of Artificial Intelligence (AI) Tools</h3>
+    <p>AI systems cannot be authors or sign disclosures. Human authors remain fully responsible for all content, including AI-assisted text. Permitted uses include grammar, clarity, and formatting improvements. The primary intellectual content must originate from the authors.</p>
+    <p><strong>Authors must not:</strong></p>
+    <ul>
+      <li>List AI as an author</li>
+      <li>Cite AI outputs as primary sources</li>
+      <li>Input patient-identifying or confidential data into AI tools</li>
+      <li>Submit substantial AI-generated content without disclosure</li>
+    </ul>
+
+    <h3>22. Data Protection and Privacy</h3>
+    <p>The journal adheres to applicable data protection laws, including UK GDPR, Data Protection Act 2018, and equivalent legislation in Gulf region jurisdictions. Authors must protect the privacy of research participants by de-identifying personal information and obtaining informed consent.</p>
+
+    <h3>23. Policy Governance and Updates</h3>
+    <p>JMLPH policies align with guidance from ICMJE, COPE, WAME, and the AMA Manual of Style. Queries may be directed to the editorial office at Editorial.Board@JMLPH.net.</p>
   </div>
 );
 
