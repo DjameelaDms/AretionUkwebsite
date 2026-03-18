@@ -124,7 +124,7 @@ async def submit_contact_form(request: ContactFormRequest):
         
         params = {
             "from": SENDER_EMAIL,
-            "to": ["post@aretion.org"],
+            "to": ["post@aretion.co.uk"],
             "subject": f"Contact Form: {request.subject}",
             "html": html_content,
             "reply_to": request.email

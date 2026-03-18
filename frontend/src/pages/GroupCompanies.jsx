@@ -267,7 +267,7 @@ const GroupCompanies = () => {
               Contact us to discuss how our group companies can support your needs
             </p>
             <a 
-              href="mailto:post@aretion.org"
+              href="mailto:post@aretion.co.uk"
               className="inline-flex items-center space-x-2 px-8 py-4 font-medium rounded transition-all"
               style={{
                 backgroundColor: 'var(--aretion-tan)',

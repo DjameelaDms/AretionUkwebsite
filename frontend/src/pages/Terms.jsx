@@ -75,8 +75,8 @@ const Terms = () => {
             <p>
               For questions about these Terms of Use, please contact:
               <br />
-              <a href="mailto:post@aretion.org" style={{ color: 'var(--aretion-steel-blue)' }}>
-                post@aretion.org
+              <a href="mailto:post@aretion.co.uk" style={{ color: 'var(--aretion-steel-blue)' }}>
+                post@aretion.co.uk
               </a>
             </p>
           </div>

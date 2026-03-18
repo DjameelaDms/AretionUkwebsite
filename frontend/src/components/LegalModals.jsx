@@ -16,7 +16,7 @@ const PrivacyContent = () => (
     <ul>
       <li>Legal name: ARETION & Company</li>
       <li>Registered office: Shelton Street, Covent Garden, London, WC2H 9JQ</li>
-      <li>Contact email: post@aretion.org</li>
+      <li>Contact email: post@aretion.co.uk</li>
       <li>Data Protection Officer: dpo@aretion.co.uk</li>
     </ul>
 
@@ -62,7 +62,7 @@ const PrivacyContent = () => (
     </ul>
 
     <h3>7. Contact and complaints</h3>
-    <p><strong>Contact:</strong> post@aretion.org (please include "Privacy" in the subject line).</p>
+    <p><strong>Contact:</strong> post@aretion.co.uk (please include "Privacy" in the subject line).</p>
     <p><strong>Complaints:</strong> You have the right to lodge a complaint with the UK supervisory authority, the Information Commissioner's Office (ICO). We encourage you to contact us first so we can try to resolve your concern.</p>
   </div>
 );
@@ -80,7 +80,7 @@ const TermsContent = () => (
     <h3>2. About us and contact details</h3>
     <p>The Site is operated by ARETION & Company.</p>
     <ul>
-      <li>Contact: post@aretion.org</li>
+      <li>Contact: post@aretion.co.uk</li>
       <li>Registered office: Shelton Street, Covent Garden, London, WC2H 9JQ</li>
     </ul>
 

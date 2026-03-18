@@ -142,11 +142,11 @@ const Contact = () => {
                   </h3>
                 </div>
                 <a 
-                  href="mailto:post@aretion.org"
+                  href="mailto:post@aretion.co.uk"
                   className="text-lg hover:underline"
                   style={{ color: 'var(--aretion-steel-blue)' }}
                 >
-                  post@aretion.org
+                  post@aretion.co.uk
                 </a>
               </div>
 

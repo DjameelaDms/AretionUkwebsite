@@ -66,8 +66,8 @@ const Privacy = () => {
             <p>
               For questions about this Privacy Notice or to exercise your rights, please contact us at:
               <br />
-              <a href="mailto:post@aretion.org" style={{ color: 'var(--aretion-steel-blue)' }}>
-                post@aretion.org
+              <a href="mailto:post@aretion.co.uk" style={{ color: 'var(--aretion-steel-blue)' }}>
+                post@aretion.co.uk
               </a>
             </p>
           </div>
