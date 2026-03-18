@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, ChevronDown, ChevronUp, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, ChevronDown, ChevronUp, Globe } from 'lucide-react';
 import { useLegalModals } from '../LegalModals';
 
 const Footer = () => {
@@ -346,18 +346,6 @@ const Footer = () => {
                   aria-label="Visit ARETION on LinkedIn"
                 >
                   <Linkedin size={16} />
-                </a>
-                <a
-                  href="https://twitter.com/aretion"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-1.5 rounded transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white/30"
-                  style={{ color: 'rgba(255, 255, 255, 0.5)' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--aretion-tan)'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.5)'}
-                  aria-label="Visit ARETION on Twitter"
-                >
-                  <Twitter size={16} />
                 </a>
               </div>
             </div>

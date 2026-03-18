@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, X } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 
 const Contact = () => {
@@ -14,6 +14,7 @@ const Contact = () => {
     consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -56,10 +57,8 @@ const Contact = () => {
       const result = await response.json();
 
       if (response.ok) {
-        toast({
-          title: "Message Sent",
-          description: result.message || "Thank you for your enquiry. We will respond shortly.",
-        });
+        // Show success modal
+        setShowSuccessModal(true);
 
         // Reset form
         setFormData({
@@ -379,6 +378,66 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div 
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+          onClick={() => setShowSuccessModal(false)}
+          data-testid="success-modal-overlay"
+        >
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+          <div 
+            className="relative bg-white rounded-lg shadow-2xl w-full max-w-md p-8 text-center"
+            onClick={(e) => e.stopPropagation()}
+            data-testid="success-modal-content"
+          >
+            <button
+              onClick={() => setShowSuccessModal(false)}
+              className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-colors"
+              aria-label="Close"
+              data-testid="success-modal-close"
+            >
+              <X size={20} style={{ color: 'var(--aretion-navy)' }} />
+            </button>
+            
+            <div 
+              className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center"
+              style={{ backgroundColor: 'rgba(26, 58, 82, 0.1)' }}
+            >
+              <CheckCircle size={32} style={{ color: 'var(--aretion-navy)' }} />
+            </div>
+            
+            <h3 
+              className="text-2xl font-semibold mb-3"
+              style={{ color: 'var(--aretion-navy)', fontFamily: 'var(--font-heading)' }}
+            >
+              Thank You!
+            </h3>
+            
+            <p 
+              className="text-lg mb-6"
+              style={{ color: 'var(--text-secondary)' }}
+            >
+              We have received your message and will get back to you soon.
+            </p>
+            
+            <button
+              onClick={() => setShowSuccessModal(false)}
+              className="px-8 py-3 rounded font-medium transition-all"
+              style={{ 
+                backgroundColor: 'var(--aretion-navy)', 
+                color: 'white' 
+              }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--aretion-steel-blue)'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'var(--aretion-navy)'}
+              data-testid="success-modal-ok-btn"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
