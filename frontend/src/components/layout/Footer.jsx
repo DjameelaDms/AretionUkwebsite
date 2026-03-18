@@ -70,12 +70,12 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-6">
               <a 
-                href="mailto:post@aretion.co.uk"
+                href="mailto:post@aretion.org"
                 className="flex items-center gap-2 text-sm transition-opacity hover:opacity-80"
                 style={{ color: 'white' }}
               >
                 <Mail size={16} />
-                <span>post@aretion.co.uk</span>
+                <span>post@aretion.org</span>
               </a>
             </div>
           </div>
@@ -149,7 +149,7 @@ const Footer = () => {
                   United Kingdom
                 </div>
                 <address className="not-italic text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
-                  71–75 Shelton Street<br />
+                  Shelton Street<br />
                   Covent Garden<br />
                   London, WC2H 9JQ
                 </address>

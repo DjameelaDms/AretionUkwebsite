@@ -342,7 +342,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:post@aretion.co.uk"
+                href="mailto:post@aretion.org"
                 className="px-8 py-4 font-medium border transition-all"
                 style={{
                   borderColor: 'rgba(255, 255, 255, 0.4)',
@@ -358,7 +358,7 @@ const Home = () => {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)';
                 }}
               >
-                post@aretion.co.uk
+                post@aretion.org
               </a>
               <Link 
                 to="/contact"

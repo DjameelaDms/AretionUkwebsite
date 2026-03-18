@@ -1,12 +1,14 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
+import asyncio
+import resend
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
-from typing import List
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
@@ -18,6 +20,10 @@ load_dotenv(ROOT_DIR / '.env')
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
+
+# Resend configuration
+resend.api_key = os.environ.get('RESEND_API_KEY')
+SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
 
 # Create the main app without a prefix
 app = FastAPI()
@@ -36,6 +42,14 @@ class StatusCheck(BaseModel):
 
 class StatusCheckCreate(BaseModel):
     client_name: str
+
+# Contact Form Model
+class ContactFormRequest(BaseModel):
+    name: str
+    email: EmailStr
+    company: Optional[str] = None
+    subject: str
+    message: str
 
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
@@ -65,6 +79,92 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+# Contact Form Endpoint
+@api_router.post("/contact")
+async def submit_contact_form(request: ContactFormRequest):
+    email_sent = False
+    email_id = None
+    email_error = None
+    
+    try:
+        # Create HTML email content
+        html_content = f"""
+        <html>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+            <h2 style="color: #1a3a52;">New Contact Form Submission</h2>
+            <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Name:</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee;">{request.name}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Email:</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee;">{request.email}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Company:</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee;">{request.company or 'Not provided'}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Subject:</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee;">{request.subject}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; font-weight: bold; vertical-align: top;">Message:</td>
+                    <td style="padding: 10px;">{request.message}</td>
+                </tr>
+            </table>
+            <p style="margin-top: 20px; color: #666; font-size: 12px;">
+                This message was sent from the ARETION & Company website contact form.
+            </p>
+        </body>
+        </html>
+        """
+        
+        params = {
+            "from": SENDER_EMAIL,
+            "to": ["post@aretion.org"],
+            "subject": f"Contact Form: {request.subject}",
+            "html": html_content,
+            "reply_to": request.email
+        }
+        
+        # Try to send email
+        try:
+            email = await asyncio.to_thread(resend.Emails.send, params)
+            email_sent = True
+            email_id = email.get("id")
+            logger.info(f"Contact form email sent successfully: {email_id}")
+        except Exception as email_error_exc:
+            email_error = str(email_error_exc)
+            logger.warning(f"Email sending failed (will still store submission): {email_error}")
+        
+        # Store submission in database regardless of email status
+        submission_doc = {
+            "id": str(uuid.uuid4()),
+            "name": request.name,
+            "email": request.email,
+            "company": request.company,
+            "subject": request.subject,
+            "message": request.message,
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "email_sent": email_sent,
+            "email_id": email_id,
+            "email_error": email_error
+        }
+        await db.contact_submissions.insert_one(submission_doc)
+        
+        logger.info(f"Contact form submission stored: {submission_doc['id']}")
+        
+        return {
+            "status": "success",
+            "message": "Thank you for your enquiry. We will respond shortly."
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to process contact form: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to process your request: {str(e)}")
 
 # Include the router in the main app
 app.include_router(api_router)

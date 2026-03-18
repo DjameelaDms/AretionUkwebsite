@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send } from 'lucide-react';
-import { handleContactForm } from '../mock/mockData';
 import { useToast } from '../hooks/use-toast';
 
 const Contact = () => {
@@ -24,7 +23,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!formData.consent) {
@@ -38,27 +37,52 @@ const Contact = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      const result = handleContactForm(formData);
-      
-      toast({
-        title: "Message Sent",
-        description: result.message,
+    try {
+      const API_URL = process.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.organisation,
+          subject: `${formData.enquiryType} - ${formData.country}`,
+          message: formData.message
+        }),
       });
 
-      // Reset form
-      setFormData({
-        enquiryType: '',
-        name: '',
-        organisation: '',
-        country: '',
-        email: '',
-        message: '',
-        consent: false
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent",
+          description: result.message || "Thank you for your enquiry. We will respond shortly.",
+        });
+
+        // Reset form
+        setFormData({
+          enquiryType: '',
+          name: '',
+          organisation: '',
+          country: '',
+          email: '',
+          message: '',
+          consent: false
+        });
+      } else {
+        throw new Error(result.detail || 'Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error.message || "Failed to send message. Please try again.",
+        variant: "destructive"
       });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -118,11 +142,11 @@ const Contact = () => {
                   </h3>
                 </div>
                 <a 
-                  href="mailto:post@aretion.co.uk"
+                  href="mailto:post@aretion.org"
                   className="text-lg hover:underline"
                   style={{ color: 'var(--aretion-steel-blue)' }}
                 >
-                  post@aretion.co.uk
+                  post@aretion.org
                 </a>
               </div>
 
@@ -140,7 +164,7 @@ const Contact = () => {
                       London Office
                     </div>
                     <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                      71–75 Shelton Street<br />
+                      Shelton Street<br />
                       Covent Garden<br />
                       London, WC2H 9JQ<br />
                       United Kingdom
