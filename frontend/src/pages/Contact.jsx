@@ -212,10 +212,10 @@ const Contact = () => {
                       style={{ borderColor: 'rgba(26, 58, 82, 0.2)' }}
                     >
                       <option value="">Please select...</option>
-                      <option value="general">General Enquiry</option>
-                      <option value="partnership">Partnership</option>
-                      <option value="media">Media Request</option>
-                      <option value="corporate">Corporate Enquiry</option>
+                      <option value="sales">Sales Inquiry</option>
+                      <option value="implementation">Implementation & Integration</option>
+                      <option value="research">Research Collaboration</option>
+                      <option value="careers">Careers/Recruitment</option>
                     </select>
                   </div>
 
