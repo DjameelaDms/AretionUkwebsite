@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, ChevronDown, ChevronUp, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLegalModals } from '../LegalModals';
 
 const Footer = () => {
   const [expandedSection, setExpandedSection] = useState(null);
-  const [language, setLanguage] = useState('EN');
   const { openPrivacy, openTerms, openCodeOfConduct, openAntiBribery, LegalModals } = useLegalModals();
 
   const toggleSection = (section) => {
@@ -315,40 +314,6 @@ const Footer = () => {
                 Anti-Bribery Policy
               </button>
             </nav>
-
-            {/* Language & Social */}
-            <div className="flex items-center gap-6">
-              {/* Language Selector */}
-              <div className="flex items-center gap-2">
-                <Globe size={14} style={{ color: 'rgba(255, 255, 255, 0.5)' }} />
-                <select
-                  value={language}
-                  onChange={(e) => setLanguage(e.target.value)}
-                  className="bg-transparent text-xs cursor-pointer focus:outline-none focus:ring-1 focus:ring-white/30 rounded"
-                  style={{ color: 'rgba(255, 255, 255, 0.7)' }}
-                  aria-label="Select language"
-                >
-                  <option value="EN" style={{ backgroundColor: '#0a1f2d' }}>English</option>
-                  <option value="AR" style={{ backgroundColor: '#0a1f2d' }}>العربية</option>
-                </select>
-              </div>
-
-              {/* Social Icons */}
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://linkedin.com/company/aretion"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-1.5 rounded transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white/30"
-                  style={{ color: 'rgba(255, 255, 255, 0.5)' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--aretion-tan)'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.5)'}
-                  aria-label="Visit ARETION on LinkedIn"
-                >
-                  <Linkedin size={16} />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
