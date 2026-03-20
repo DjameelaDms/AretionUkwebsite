@@ -25,9 +25,9 @@ const Footer = () => {
     {
       title: 'Operating Entities',
       links: [
-        { label: 'ARETION Informatics', path: '/group-companies#informatics' },
-        { label: 'ARETION Publishing', path: '/group-companies#publishing' },
+        { label: 'ARETION Solution', path: '/group-companies#solution' },
         { label: 'ARETION Healthcare Consulting', path: '/group-companies#consulting' },
+        { label: 'ARETION Publishing', path: '/group-companies#publishing' },
         { label: 'Journal of Medicine, Law & Public Health', path: 'https://jmlph.net', external: true },
       ]
     },

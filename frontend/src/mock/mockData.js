@@ -3,27 +3,27 @@
 export const groupCompanies = [
   {
     id: 1,
-    name: "ARETION Informatics Solutions",
-    tagline: "Health Information Systems (HIS)",
-    description: "Design and delivery support for HIS and healthcare digital platforms.",
-    link: "https://informatics.aretion.co.uk",
-    icon: "Database"
+    name: "ARETION Solution",
+    tagline: "Intelligent Infrastructure Solutions",
+    description: "Transformative solutions for operational excellence, safety, and resilience in critical infrastructure.",
+    link: "https://solution.aretion.co.uk",
+    icon: "Shield"
   },
   {
     id: 2,
-    name: "ARETION Publishing Group",
-    tagline: "Medicine, Law & Public Health",
-    description: "Publishing across medicine, law and public health, with emphasis on editorial governance and research integrity.",
-    link: "https://publishing.aretion.co.uk",
-    icon: "BookOpen"
-  },
-  {
-    id: 3,
     name: "ARETION Healthcare Consulting",
     tagline: "Governance & Medical Law Research",
     description: "Advisory and project support across healthcare governance and medical law research themes.",
     link: "https://Aretion.org",
     icon: "Stethoscope"
+  },
+  {
+    id: 3,
+    name: "ARETION Publishing Group",
+    tagline: "Medicine, Law & Public Health",
+    description: "Publishing across medicine, law and public health, with emphasis on editorial governance and research integrity.",
+    link: "https://publishing.aretion.co.uk",
+    icon: "BookOpen"
   }
 ];
 

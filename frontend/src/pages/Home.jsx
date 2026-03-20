@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Database, BookOpen, Briefcase } from 'lucide-react';
+import { ArrowRight, Shield, BookOpen, Briefcase } from 'lucide-react';
 import { groupCompanies } from '../mock/mockData';
 
 const Home = () => {
   const iconComponents = {
-    Database: Database,
+    Shield: Shield,
     BookOpen: BookOpen,
     Stethoscope: Briefcase
   };

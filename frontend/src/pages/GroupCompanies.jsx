@@ -47,38 +47,55 @@ const GroupCompanies = () => {
         </div>
       </section>
 
-      {/* ARETION Informatics Solutions */}
+      {/* ARETION Solution */}
       <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--aretion-cream)' }}>
         <div className="container mx-auto">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-5 gap-8">
               <div className="md:col-span-2">
                 <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>
-                  INFORMATICS
+                  INTELLIGENT INFRASTRUCTURE SOLUTIONS
                 </div>
                 <h2 className="mb-4" style={{ color: 'var(--aretion-navy)' }}>
-                  ARETION Informatics Solutions
+                  ARETION Solution
                 </h2>
               </div>
               <div className="md:col-span-3">
                 <p className="text-lg mb-4 font-medium" style={{ color: 'var(--aretion-navy)' }}>
-                  Health Information Systems (HIS) and digital platforms
+                  Transformative solutions for operational excellence, safety, and resilience in critical infrastructure
                 </p>
                 <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Design and delivery support for HIS and healthcare digital platforms, emphasizing 
-                  operational usability and disciplined delivery.
+                  Comprehensive ecosystem for facility modernisation and emergency response, delivered through integrated systems and advanced analytics.
                 </p>
                 <div className="mb-6">
                   <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
-                    Services include:
+                    Current Solution Themes:
                   </div>
                   <ul className="space-y-2">
                     {[
-                      'HIS architecture and design',
-                      'Implementation support',
-                      'Integration and interoperability',
-                      'Reporting and analytics enablement',
-                      'Documentation and operational adoption'
+                      'Early Warning Detection Systems – Environmental monitoring and threat prediction before operational crises occur',
+                      'Fire & Flame Detection Networks – Unified, intelligent fire detection across facilities with integrated command response',
+                      'Data Centre & Critical Infrastructure Security – Continuous environmental and security surveillance with automated failover mechanisms',
+                      'Leadership Protection & Secure Operations – Hardened command centres with secure communication during facility-wide emergencies',
+                      'Holistic All-Hazard Response – Integrated threat coordination addressing floods, fires, cyber attacks, and cascading emergencies'
+                    ].map((service, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <span style={{ color: 'var(--aretion-rust)' }}>•</span>
+                        <span style={{ color: 'var(--text-secondary)' }}>{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-6">
+                  <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
+                    Specialised Service Offerings:
+                  </div>
+                  <ul className="space-y-2">
+                    {[
+                      'DisasterMs – Advanced ecosystem for facility safety with early warning and closed-loop response',
+                      'Tele-Intubation – Remote expert support for critical airway management',
+                      'Emergency Medicine Cluster Coverage (EM:CC) – Regional facility coordination for patient journey management',
+                      'Protocol Designer – AI platform for custom disaster and emergency protocol development'
                     ].map((service, index) => (
                       <li key={index} className="flex items-start space-x-2">
                         <span style={{ color: 'var(--aretion-rust)' }}>•</span>
@@ -88,7 +105,7 @@ const GroupCompanies = () => {
                   </ul>
                 </div>
                 <a
-                  href="https://informatics.aretion.co.uk"
+                  href="https://solution.aretion.co.uk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 px-6 py-3 font-medium rounded border-2 transition-all"
@@ -106,7 +123,74 @@ const GroupCompanies = () => {
                     e.currentTarget.style.color = 'var(--aretion-navy)';
                   }}
                 >
-                  <span>Visit informatics.aretion.co.uk</span>
+                  <span>Visit Solution.aretion.co.uk</span>
+                  <ExternalLink size={16} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ARETION Healthcare Consulting */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-5 gap-8">
+              <div className="md:col-span-2">
+                <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>
+                  CONSULTING
+                </div>
+                <h2 className="mb-4" style={{ color: 'var(--aretion-navy)' }}>
+                  ARETION Healthcare Consulting
+                </h2>
+              </div>
+              <div className="md:col-span-3">
+                <p className="text-lg mb-4 font-medium" style={{ color: 'var(--aretion-navy)' }}>
+                  Healthcare governance and medical law research themes
+                </p>
+                <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                  Advisory and project support across healthcare governance and medical law research themes, 
+                  delivered with confidentiality and disciplined execution.
+                </p>
+                <div className="mb-6">
+                  <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
+                    Current themes:
+                  </div>
+                  <ul className="space-y-2">
+                    {[
+                      'Healthcare governance and assurance support',
+                      'Medical law research support (non-legal)',
+                      'Programme support',
+                      'Post-graduate programmes in Nigeria, Cameroon, and Kenya'
+                    ].map((theme, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <span style={{ color: 'var(--aretion-rust)' }}>•</span>
+                        <span style={{ color: 'var(--text-secondary)' }}>{theme}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <a
+                  href="https://Aretion.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 px-6 py-3 font-medium rounded border-2 transition-all"
+                  style={{
+                    borderColor: 'var(--aretion-navy)',
+                    color: 'var(--aretion-navy)',
+                    backgroundColor: 'white'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'var(--aretion-navy)';
+                    e.currentTarget.style.color = 'white';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'white';
+                    e.currentTarget.style.color = 'var(--aretion-navy)';
+                  }}
+                >
+                  <span>Visit Aretion.org</span>
                   <ExternalLink size={16} />
                 </a>
               </div>
@@ -116,7 +200,7 @@ const GroupCompanies = () => {
       </section>
 
       {/* ARETION Publishing Group */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--aretion-cream)' }}>
         <div className="container mx-auto">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-5 gap-8">
@@ -181,73 +265,6 @@ const GroupCompanies = () => {
                   }}
                 >
                   <span>Visit publishing.aretion.co.uk</span>
-                  <ExternalLink size={16} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ARETION Healthcare Consulting */}
-      <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--aretion-cream)' }}>
-        <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-5 gap-8">
-              <div className="md:col-span-2">
-                <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>
-                  CONSULTING
-                </div>
-                <h2 className="mb-4" style={{ color: 'var(--aretion-navy)' }}>
-                  ARETION Healthcare Consulting
-                </h2>
-              </div>
-              <div className="md:col-span-3">
-                <p className="text-lg mb-4 font-medium" style={{ color: 'var(--aretion-navy)' }}>
-                  Healthcare governance and medical law research themes
-                </p>
-                <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Advisory and project support across healthcare governance and medical law research themes, 
-                  delivered with confidentiality and disciplined execution.
-                </p>
-                <div className="mb-6">
-                  <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
-                    Current themes:
-                  </div>
-                  <ul className="space-y-2">
-                    {[
-                      'Healthcare governance and assurance support',
-                      'Medical law research support (non-legal)',
-                      'Programme support',
-                      'Post-graduate programmes in Nigeria, Cameroon, and Kenya'
-                    ].map((theme, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <span style={{ color: 'var(--aretion-rust)' }}>•</span>
-                        <span style={{ color: 'var(--text-secondary)' }}>{theme}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <a
-                  href="https://Aretion.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-6 py-3 font-medium rounded border-2 transition-all"
-                  style={{
-                    borderColor: 'var(--aretion-navy)',
-                    color: 'var(--aretion-navy)',
-                    backgroundColor: 'white'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'var(--aretion-navy)';
-                    e.currentTarget.style.color = 'white';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'white';
-                    e.currentTarget.style.color = 'var(--aretion-navy)';
-                  }}
-                >
-                  <span>Visit Aretion.org</span>
                   <ExternalLink size={16} />
                 </a>
               </div>
