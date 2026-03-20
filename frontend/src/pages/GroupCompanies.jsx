@@ -146,31 +146,10 @@ const GroupCompanies = () => {
                 </h2>
               </div>
               <div className="md:col-span-3">
-                <p className="text-lg mb-4 font-medium" style={{ color: 'var(--aretion-navy)' }}>
-                  Healthcare governance and medical law research themes
-                </p>
                 <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                   Advisory and project support across healthcare governance and medical law research themes, 
                   delivered with confidentiality and disciplined execution.
                 </p>
-                <div className="mb-6">
-                  <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
-                    Current themes:
-                  </div>
-                  <ul className="space-y-2">
-                    {[
-                      'Healthcare governance and assurance support',
-                      'Medical law research support (non-legal)',
-                      'Programme support',
-                      'Post-graduate programmes in Nigeria, Cameroon, and Kenya'
-                    ].map((theme, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <span style={{ color: 'var(--aretion-rust)' }}>•</span>
-                        <span style={{ color: 'var(--text-secondary)' }}>{theme}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
                 <a
                   href="https://Aretion.org"
                   target="_blank"
