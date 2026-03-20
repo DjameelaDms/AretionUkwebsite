@@ -217,6 +217,7 @@ const Contact = () => {
                       <option value="research">Research Collaboration</option>
                       <option value="careers">Careers/Recruitment</option>
                       <option value="partner">Become a Partner</option>
+                      <option value="facility">Schedule a Facility Assessment</option>
                     </select>
                   </div>
 
