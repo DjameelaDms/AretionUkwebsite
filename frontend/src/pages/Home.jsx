@@ -71,7 +71,7 @@ const Home = () => {
                   e.currentTarget.style.color = 'var(--aretion-navy)';
                 }}
               >
-                <span>Explore Group Companies</span>
+                <span>Explore ARETION Group</span>
                 <ArrowRight size={16} />
               </Link>
               <Link 
@@ -211,7 +211,7 @@ const Home = () => {
                 style={{ backgroundColor: 'var(--aretion-rust)' }}
               />
             </div>
-            <h2 className="mb-6 font-light tracking-tight" style={{ color: 'var(--aretion-navy)' }}>ARETION Group Companies</h2>
+            <h2 className="mb-6 font-light tracking-tight" style={{ color: 'var(--aretion-navy)' }}>ARETION Group</h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
               Three specialist companies working across the lifecycle of healthcare knowledge
             </p>

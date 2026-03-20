@@ -26,7 +26,7 @@ const GroupCompanies = () => {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="mb-6 font-light" style={{ color: 'white' }}>
-              Group Companies
+              ARETION Group
             </h1>
             <p className="text-xl leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Operating entities within the ARETION group

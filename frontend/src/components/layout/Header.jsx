@@ -22,7 +22,7 @@ const Header = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
-    { path: '/group-companies', label: 'Group Companies' },
+    { path: '/group-companies', label: 'ARETION Group' },
     { path: '/governance', label: 'Governance & Leadership' },
     { path: '/standards', label: 'Standards & Policies' },
     { path: '/careers', label: 'Careers' },

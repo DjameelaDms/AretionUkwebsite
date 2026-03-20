@@ -152,7 +152,7 @@ const About = () => {
                 e.currentTarget.style.color = 'var(--aretion-navy)';
               }}
             >
-              <span>View Group Companies</span>
+              <span>View ARETION Group</span>
               <ArrowRight size={18} />
             </Link>
           </div>

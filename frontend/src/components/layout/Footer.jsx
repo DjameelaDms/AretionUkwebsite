@@ -16,7 +16,7 @@ const Footer = () => {
       title: 'Our Group',
       links: [
         { label: 'About ARETION', path: '/about' },
-        { label: 'Group Companies', path: '/group-companies' },
+        { label: 'ARETION Group', path: '/group-companies' },
         { label: 'Governance & Leadership', path: '/governance' },
         { label: 'Standards & Policies', path: '/standards' },
         { label: 'Our History', path: '/about#history' },
