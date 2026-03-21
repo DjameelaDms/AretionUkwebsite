@@ -73,9 +73,9 @@ export const leadershipTeam = [
     email: "dthompson@aretion.co.uk"
   },
   {
-    name: "Charlotte Moore",
-    role: "Director of Research, Innovation & New Service Development",
-    email: "cmoore@aretion.co.uk"
+    name: "Sharafaldeen Bin Nafisah",
+    role: "Chief Human Resources Officer",
+    email: "Sbinnafisah@aretion.co.uk"
   },
   {
     name: "William Carter",
@@ -83,14 +83,14 @@ export const leadershipTeam = [
     email: "wcarter@aretion.co.uk"
   },
   {
+    name: "Charlotte Moore",
+    role: "Director of Research, Innovation & New Service Development",
+    email: "cmoore@aretion.co.uk"
+  },
+  {
     name: "Emma Watson",
     role: "Head of Business Development",
     email: "ewatson@aretion.co.uk"
-  },
-  {
-    name: "Sharafaldeen Bin Nafisah",
-    role: "Chief Human Resources Officer",
-    email: "Sbinnafisah@aretion.co.uk"
   }
 ];
 
