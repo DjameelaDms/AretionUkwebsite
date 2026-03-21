@@ -1,15 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, BookOpen, Briefcase } from 'lucide-react';
-import { groupCompanies } from '../mock/mockData';
+import { ArrowRight } from 'lucide-react';
 
 const Home = () => {
-  const iconComponents = {
-    Shield: Shield,
-    BookOpen: BookOpen,
-    Stethoscope: Briefcase
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section with Clear Background Image - No Overlay */}
@@ -182,7 +175,7 @@ const Home = () => {
             </div>
             <div className="space-y-6 text-lg leading-relaxed" style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
               <p>
-                ARETION & Company originated in 1986 as a small team providing independent support to healthcare organisations. 
+                ARETION & Company started as a small team providing independent support to healthcare organisations. 
                 Over time, its work has broadened to encompass data and digital health, specialist publishing and strategic consulting, 
                 whilst retaining a clear focus on strengthening health and care systems.
               </p>
@@ -197,70 +190,6 @@ const Home = () => {
                 whilst collaborating closely on programmes where combined expertise adds particular value.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Group Companies Section */}
-      <section className="py-20 md:py-32" style={{ backgroundColor: '#f8f8f8' }}>
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <div 
-                className="w-16 h-0.5 mx-auto"
-                style={{ backgroundColor: 'var(--aretion-rust)' }}
-              />
-            </div>
-            <h2 className="mb-6 font-light tracking-tight" style={{ color: 'var(--aretion-navy)' }}>ARETION Group</h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-              Three high-performing operating entities delivering scalable solutions across healthcare technology, publishing, and advisory services
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {groupCompanies.map((company, index) => {
-              const IconComponent = iconComponents[company.icon];
-              return (
-                <div
-                  key={company.id}
-                  className="bg-white p-10 transition-all hover:shadow-xl group border"
-                  style={{
-                    animationDelay: `${index * 100}ms`,
-                    borderColor: 'rgba(26, 58, 82, 0.06)',
-                    borderTop: '3px solid var(--aretion-navy)'
-                  }}
-                >
-                  <div 
-                    className="w-14 h-14 mb-8 flex items-center justify-center transition-colors"
-                    style={{ backgroundColor: 'var(--aretion-cream)' }}
-                  >
-                    <IconComponent 
-                      size={26} 
-                      style={{ color: 'var(--aretion-navy)' }}
-                    />
-                  </div>
-                  <h3 className="text-xl font-normal mb-4 tracking-tight" style={{ color: 'var(--aretion-navy)' }}>
-                    {company.name}
-                  </h3>
-                  <p className="text-sm font-medium mb-4 uppercase tracking-wider" style={{ color: 'var(--aretion-rust)', letterSpacing: '0.1em' }}>
-                    {company.tagline}
-                  </p>
-                  <p className="text-sm mb-8 leading-relaxed" style={{ color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-                    {company.description}
-                  </p>
-                  <a
-                    href={company.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 text-sm font-medium transition-all group-hover:translate-x-1 uppercase tracking-wide"
-                    style={{ color: 'var(--aretion-navy)', letterSpacing: '0.05em' }}
-                  >
-                    <span>Learn more</span>
-                    <ArrowRight size={16} />
-                  </a>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
