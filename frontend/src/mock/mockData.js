@@ -3,25 +3,25 @@
 export const groupCompanies = [
   {
     id: 1,
-    name: "ARETION Solution",
-    tagline: "Intelligent Infrastructure Solutions",
-    description: "Transformative solutions for operational excellence, safety, and resilience in critical infrastructure.",
+    name: "ARETION Solutions",
+    tagline: "Critical Infrastructure Technology",
+    description: "Proprietary platforms for facility safety, emergency response, and operational resilience with proven deployment across healthcare and critical infrastructure sectors.",
     link: "https://solutions.aretion.co.uk",
     icon: "Shield"
   },
   {
     id: 2,
     name: "ARETION Healthcare Consulting",
-    tagline: "Consulting",
-    description: "Advisory and project support across healthcare governance and medical law research themes.",
+    tagline: "Strategic Advisory Services",
+    description: "End-to-end consulting delivering measurable operational improvements, regulatory compliance, and strategic transformation for healthcare organizations.",
     link: "https://Aretion.org",
     icon: "Stethoscope"
   },
   {
     id: 3,
     name: "ARETION Publishing Group",
-    tagline: "Medicine, Law & Public Health",
-    description: "Publishing across medicine, law and public health, with emphasis on editorial governance and research integrity.",
+    tagline: "Medical & Scientific Publishing",
+    description: "Peer-reviewed journals and evidence synthesis publications serving the medicine, law, and public health sectors with established editorial governance.",
     link: "https://publishing.aretion.co.uk",
     icon: "BookOpen"
   }

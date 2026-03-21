@@ -110,7 +110,7 @@ const Contact = () => {
               Contact
             </h1>
             <p className="text-xl leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-              Contact ARETION & Company for corporate enquiries, partnerships, or media requests
+              Connect with our team to discuss investment opportunities, strategic partnerships, or corporate enquiries
             </p>
           </div>
         </div>
@@ -127,8 +127,8 @@ const Contact = () => {
                   Get in Touch
                 </h2>
                 <p className="leading-relaxed mb-8" style={{ color: 'var(--text-secondary)' }}>
-                  We welcome enquiries from potential partners, clients, media representatives, 
-                  and other stakeholders.
+                  We welcome enquiries from investors, strategic partners, and organizations 
+                  seeking healthcare transformation solutions.
                 </p>
               </div>
 

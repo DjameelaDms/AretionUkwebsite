@@ -213,7 +213,7 @@ const Home = () => {
             </div>
             <h2 className="mb-6 font-light tracking-tight" style={{ color: 'var(--aretion-navy)' }}>ARETION Group</h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-              Three specialist companies working across the lifecycle of healthcare knowledge
+              Three high-performing operating entities delivering scalable solutions across healthcare technology, publishing, and advisory services
             </p>
           </div>
 

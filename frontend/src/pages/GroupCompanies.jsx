@@ -40,44 +40,44 @@ const GroupCompanies = () => {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <p className="text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              ARETION & Company oversees three operating entities, each managed with defined accountabilities 
-              and aligned to group standards for quality, governance, and responsible conduct.
+              ARETION & Company operates three distinct business units, each with defined governance structures, 
+              clear performance metrics, and aligned commercial objectives.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ARETION Solution */}
+      {/* ARETION Solutions */}
       <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--aretion-cream)' }}>
         <div className="container mx-auto">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-5 gap-8">
               <div className="md:col-span-2">
                 <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>
-                  INTELLIGENT INFRASTRUCTURE SOLUTIONS
+                  CRITICAL INFRASTRUCTURE TECHNOLOGY
                 </div>
                 <h2 className="mb-4" style={{ color: 'var(--aretion-navy)' }}>
-                  ARETION Solution
+                  ARETION Solutions
                 </h2>
               </div>
               <div className="md:col-span-3">
                 <p className="text-lg mb-4 font-medium" style={{ color: 'var(--aretion-navy)' }}>
-                  Transformative solutions for operational excellence, safety, and resilience in critical infrastructure
+                  Scalable technology platforms for facility safety and operational resilience
                 </p>
                 <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Comprehensive ecosystem for facility modernisation and emergency response, delivered through integrated systems and advanced analytics.
+                  Proprietary systems delivering measurable ROI through reduced downtime, enhanced safety compliance, and integrated emergency response capabilities.
                 </p>
                 <div className="mb-6">
                   <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
-                    Current Solution Themes:
+                    Core Capabilities:
                   </div>
                   <ul className="space-y-2">
                     {[
-                      'Early Warning Detection Systems – Environmental monitoring and threat prediction before operational crises occur',
-                      'Fire & Flame Detection Networks – Unified, intelligent fire detection across facilities with integrated command response',
-                      'Data Centre & Critical Infrastructure Security – Continuous environmental and security surveillance with automated failover mechanisms',
-                      'Leadership Protection & Secure Operations – Hardened command centres with secure communication during facility-wide emergencies',
-                      'Holistic All-Hazard Response – Integrated threat coordination addressing floods, fires, cyber attacks, and cascading emergencies'
+                      'Early Warning Detection – Predictive monitoring reducing incident response time by up to 40%',
+                      'Fire & Safety Networks – Integrated detection systems with automated command protocols',
+                      'Critical Infrastructure Security – 24/7 surveillance with automated failover',
+                      'Secure Operations Centres – Hardened command facilities for business continuity',
+                      'All-Hazard Response Platform – Unified threat management across multiple risk vectors'
                     ].map((service, index) => (
                       <li key={index} className="flex items-start space-x-2">
                         <span style={{ color: 'var(--aretion-rust)' }}>•</span>
@@ -88,14 +88,14 @@ const GroupCompanies = () => {
                 </div>
                 <div className="mb-6">
                   <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
-                    Specialised Service Offerings:
+                    Deployed Products:
                   </div>
                   <ul className="space-y-2">
                     {[
-                      'DisasterMs – Advanced ecosystem for facility safety with early warning and closed-loop response',
-                      'Tele-Intubation – Remote expert support for critical airway management',
-                      'Emergency Medicine Cluster Coverage (EM:CC) – Regional facility coordination for patient journey management',
-                      'Protocol Designer – AI platform for custom disaster and emergency protocol development'
+                      'DisasterMs – Enterprise facility safety platform with predictive analytics',
+                      'Tele-Intubation – Remote clinical support reducing specialist deployment costs',
+                      'EM:CC – Regional coordination platform optimizing patient flow',
+                      'Protocol Designer – AI-powered emergency protocol automation'
                     ].map((service, index) => (
                       <li key={index} className="flex items-start space-x-2">
                         <span style={{ color: 'var(--aretion-rust)' }}>•</span>
@@ -139,7 +139,7 @@ const GroupCompanies = () => {
             <div className="grid md:grid-cols-5 gap-8">
               <div className="md:col-span-2">
                 <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>
-                  CONSULTING
+                  STRATEGIC ADVISORY
                 </div>
                 <h2 className="mb-4" style={{ color: 'var(--aretion-navy)' }}>
                   ARETION Healthcare Consulting
@@ -147,52 +147,81 @@ const GroupCompanies = () => {
               </div>
               <div className="md:col-span-3">
                 <p className="text-lg mb-4 font-medium" style={{ color: 'var(--aretion-navy)' }}>
-                  Comprehensive healthcare consulting services and strategic advisory
+                  End-to-end consulting delivering measurable operational improvements
                 </p>
                 <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Design and delivery support for healthcare organizations, emphasizing operational excellence and sustainable transformation.
+                  Full-spectrum advisory services supporting healthcare organizations through strategic transformation, regulatory compliance, and performance optimization.
                 </p>
                 <div className="mb-6">
                   <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
-                    Services include:
+                    Service Categories:
                   </div>
-                  <ul className="space-y-2 grid md:grid-cols-2 gap-x-6">
-                    {[
-                      'Healthcare HR Consulting',
-                      'Disaster Management Consulting',
-                      'Healthcare Quality and National & International Accreditation',
-                      'Clinical Research Services',
-                      'Healthcare Legal & Legislative Services',
-                      'Healthcare Technology Solutions',
-                      'Project Management',
-                      'Toxicology & Environmental Medicine Services',
-                      'Medical & Healthcare Event Services',
-                      'Telepsychology & Mental Health Services',
-                      'Leadership Development & Communication Coaching',
-                      'Organizational Change Management Consulting',
-                      'Healthcare Financial Management Advisory',
-                      'Healthcare Economics & Capital Planning Support',
-                      'Risk Management & Insurance Advisory',
-                      'Financial Statement Analysis & Valuation Support',
-                      'Applied Analytics & Optimization Consulting',
-                      'Business Analytics, Reporting & Visualization',
-                      'Health Informatics & HIMS Optimization',
-                      'AI & Machine Learning Advisory for Healthcare',
-                      'Operations Strategy & Capacity Planning',
-                      'Supply Chain & Inventory Optimization',
-                      'Quality Management & TQM Program Design',
-                      'Strategic Project Management & PMO Support',
-                      'Healthcare Marketing, Branding & Patient-Centric Growth Strategy',
-                      'Digital & Social Media Marketing Performance Advisory',
-                      'Negotiation, Conflict Resolution & Partnership Support',
-                      'Applied Business & Market Research Services'
-                    ].map((service, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <span style={{ color: 'var(--aretion-rust)' }}>•</span>
-                        <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{service}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>Operations & Quality</div>
+                      <ul className="space-y-1">
+                        {[
+                          'Quality Management & Accreditation',
+                          'Operations Strategy & Capacity Planning',
+                          'Supply Chain Optimization',
+                          'Health Informatics & HIMS'
+                        ].map((service, index) => (
+                          <li key={index} className="flex items-start space-x-2">
+                            <span style={{ color: 'var(--aretion-rust)' }}>•</span>
+                            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{service}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>Finance & Risk</div>
+                      <ul className="space-y-1">
+                        {[
+                          'Financial Management Advisory',
+                          'Capital Planning & Economics',
+                          'Risk Management & Insurance',
+                          'Valuation & Due Diligence Support'
+                        ].map((service, index) => (
+                          <li key={index} className="flex items-start space-x-2">
+                            <span style={{ color: 'var(--aretion-rust)' }}>•</span>
+                            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{service}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>Technology & Analytics</div>
+                      <ul className="space-y-1">
+                        {[
+                          'AI & Machine Learning Advisory',
+                          'Business Analytics & Visualization',
+                          'Digital Transformation',
+                          'Applied Analytics & Optimization'
+                        ].map((service, index) => (
+                          <li key={index} className="flex items-start space-x-2">
+                            <span style={{ color: 'var(--aretion-rust)' }}>•</span>
+                            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{service}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium mb-2" style={{ color: 'var(--aretion-rust)' }}>Leadership & Growth</div>
+                      <ul className="space-y-1">
+                        {[
+                          'Strategic Project Management',
+                          'Change Management Consulting',
+                          'Leadership Development',
+                          'Market Research & Growth Strategy'
+                        ].map((service, index) => (
+                          <li key={index} className="flex items-start space-x-2">
+                            <span style={{ color: 'var(--aretion-rust)' }}>•</span>
+                            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{service}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <a
                   href="https://Aretion.org"
@@ -301,10 +330,10 @@ const GroupCompanies = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="mb-6" style={{ color: 'var(--text-light)' }}>
-              Interested in working with us?
+              Partner with ARETION
             </h2>
             <p className="text-lg mb-8" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
-              Contact us to discuss how our group companies can support your needs
+              Explore investment opportunities and strategic partnerships across our portfolio
             </p>
             <a 
               href="mailto:post@aretion.co.uk"

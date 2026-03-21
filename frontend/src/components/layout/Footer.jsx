@@ -64,7 +64,7 @@ const Footer = () => {
                 <span style={{ color: 'white' }}>Company</span>
               </div>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-                Healthcare Informatics · Publishing · Consulting
+                Technology · Advisory · Publishing
               </p>
             </div>
             <div className="flex items-center gap-6">
