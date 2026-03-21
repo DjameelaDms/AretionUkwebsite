@@ -25,9 +25,9 @@ const Footer = () => {
     {
       title: 'Operating Entities',
       links: [
-        { label: 'ARETION Solutions', path: '/group-companies#solution' },
-        { label: 'ARETION Healthcare Consulting', path: '/group-companies#consulting' },
-        { label: 'ARETION Publishing', path: '/group-companies#publishing' },
+        { label: 'ARETION Solutions', path: 'https://solutions.aretion.co.uk/', external: true },
+        { label: 'ARETION Healthcare Consulting', path: 'https://aretion.org/', external: true },
+        { label: 'ARETION Publishing', path: 'https://publishing.aretion.co.uk/', external: true },
       ]
     },
     {
@@ -36,7 +36,6 @@ const Footer = () => {
         { label: 'Newsroom', path: '/newsroom' },
         { label: 'Careers', path: '/careers' },
         { label: 'Contact Us', path: '/contact' },
-        { label: 'Media Enquiries', path: '/contact#media' },
       ]
     }
   ];
