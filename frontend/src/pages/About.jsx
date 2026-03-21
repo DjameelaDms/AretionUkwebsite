@@ -40,7 +40,7 @@ const About = () => {
             <h2 className="mb-6 font-light" style={{ color: 'var(--aretion-navy)' }}>Who we are</h2>
             <div className="space-y-6 text-lg leading-relaxed" style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
               <p>
-                ARETION & Company is a UK-based holding company overseeing three operating entities across healthcare informatics, 
+                ARETION & Company is a UK-based company overseeing three operating entities across healthcare informatics, 
                 publishing, and consulting.
               </p>
               <p>

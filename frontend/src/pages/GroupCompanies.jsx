@@ -73,7 +73,7 @@ const GroupCompanies = () => {
                   </div>
                   <ul className="space-y-2">
                     {[
-                      'Early Warning Detection – Predictive monitoring reducing incident response time by up to 40%',
+                      'Early Warning Detection – Predictive monitoring reducing incident response time',
                       'Fire & Safety Networks – Integrated detection systems with automated command protocols',
                       'Critical Infrastructure Security – 24/7 surveillance with automated failover',
                       'Secure Operations Centres – Hardened command facilities for business continuity',

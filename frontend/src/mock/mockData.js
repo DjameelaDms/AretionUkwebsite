@@ -86,6 +86,11 @@ export const leadershipTeam = [
     name: "Emma Watson",
     role: "Head of Business Development",
     email: "ewatson@aretion.co.uk"
+  },
+  {
+    name: "Sharafaldeen Bin Nafisah",
+    role: "Chief Human Resources Officer",
+    email: "Sbinnafisah@aretion.co.uk"
   }
 ];
 

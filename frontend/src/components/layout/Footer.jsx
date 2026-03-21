@@ -28,7 +28,6 @@ const Footer = () => {
         { label: 'ARETION Solutions', path: '/group-companies#solution' },
         { label: 'ARETION Healthcare Consulting', path: '/group-companies#consulting' },
         { label: 'ARETION Publishing', path: '/group-companies#publishing' },
-        { label: 'Journal of Medicine, Law & Public Health', path: 'https://jmlph.net', external: true },
       ]
     },
     {
