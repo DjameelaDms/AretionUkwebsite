@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Upload, CheckCircle } from 'lucide-react';
-import { handleCareerForm } from '../mock/mockData';
+import { ArrowRight, Upload, CheckCircle, X } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 
 const Careers = () => {
@@ -13,6 +12,7 @@ const Careers = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fileName, setFileName] = useState('');
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,32 +27,51 @@ const Careers = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      const result = handleCareerForm({
-        ...formData,
-        cvFileName: fileName
-      });
-      
-      toast({
-        title: "Registration Successful",
-        description: result.message,
+    try {
+      const API_URL = process.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${API_URL}/api/careers/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          areaOfInterest: formData.areaOfInterest,
+          cvFileName: fileName || null
+        }),
       });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        areaOfInterest: '',
-        cvFile: null
+      const result = await response.json();
+
+      if (response.ok) {
+        // Show success modal
+        setShowSuccessModal(true);
+
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          areaOfInterest: '',
+          cvFile: null
+        });
+        setFileName('');
+      } else {
+        throw new Error(result.detail || 'Failed to submit registration');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error.message || "Failed to submit registration. Please try again.",
+        variant: "destructive"
       });
-      setFileName('');
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -232,9 +251,9 @@ const Careers = () => {
                     style={{ borderColor: 'rgba(26, 58, 82, 0.2)' }}
                   >
                     <option value="">Please select...</option>
-                    <option value="informatics">Informatics</option>
-                    <option value="publishing">Publishing</option>
+                    <option value="solutions">Solutions</option>
                     <option value="healthcare-consulting">Healthcare Consulting</option>
+                    <option value="publishing">Publishing</option>
                     <option value="corporate">Corporate / Group</option>
                   </select>
                 </div>
@@ -305,6 +324,66 @@ const Careers = () => {
           </div>
         </div>
       </section>
+
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div 
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+          onClick={() => setShowSuccessModal(false)}
+          data-testid="careers-success-modal-overlay"
+        >
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+          <div 
+            className="relative bg-white rounded-lg shadow-2xl w-full max-w-md p-8 text-center"
+            onClick={(e) => e.stopPropagation()}
+            data-testid="careers-success-modal-content"
+          >
+            <button
+              onClick={() => setShowSuccessModal(false)}
+              className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-colors"
+              aria-label="Close"
+              data-testid="careers-success-modal-close"
+            >
+              <X size={20} style={{ color: 'var(--aretion-navy)' }} />
+            </button>
+            
+            <div 
+              className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center"
+              style={{ backgroundColor: 'rgba(26, 58, 82, 0.1)' }}
+            >
+              <CheckCircle size={32} style={{ color: 'var(--aretion-navy)' }} />
+            </div>
+            
+            <h3 
+              className="text-2xl font-semibold mb-3"
+              style={{ color: 'var(--aretion-navy)', fontFamily: 'var(--font-heading)' }}
+            >
+              Thank You!
+            </h3>
+            
+            <p 
+              className="text-lg mb-6"
+              style={{ color: 'var(--text-secondary)' }}
+            >
+              Your interest has been registered. We will be in touch when relevant opportunities arise.
+            </p>
+            
+            <button
+              onClick={() => setShowSuccessModal(false)}
+              className="px-8 py-3 rounded font-medium transition-all"
+              style={{ 
+                backgroundColor: 'var(--aretion-navy)', 
+                color: 'white' 
+              }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--aretion-steel-blue)'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'var(--aretion-navy)'}
+              data-testid="careers-success-modal-ok-btn"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

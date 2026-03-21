@@ -51,6 +51,13 @@ class ContactFormRequest(BaseModel):
     subject: str
     message: str
 
+# Career Interest Model
+class CareerInterestRequest(BaseModel):
+    name: str
+    email: EmailStr
+    areaOfInterest: str
+    cvFileName: Optional[str] = None
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
@@ -164,6 +171,97 @@ async def submit_contact_form(request: ContactFormRequest):
         
     except Exception as e:
         logger.error(f"Failed to process contact form: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to process your request: {str(e)}")
+
+# Career Interest Registration Endpoint
+@api_router.post("/careers/register")
+async def register_career_interest(request: CareerInterestRequest):
+    email_sent = False
+    email_id = None
+    email_error = None
+    
+    try:
+        # Map area of interest to readable format
+        area_labels = {
+            'informatics': 'Informatics',
+            'publishing': 'Publishing',
+            'healthcare-consulting': 'Healthcare Consulting',
+            'corporate': 'Corporate / Group',
+            'solutions': 'Solutions'
+        }
+        area_display = area_labels.get(request.areaOfInterest, request.areaOfInterest)
+        
+        # Create HTML email content
+        html_content = f"""
+        <html>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+            <h2 style="color: #1a3a52;">New Career Interest Registration</h2>
+            <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Name:</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee;">{request.name}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Email:</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee;">{request.email}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">Area of Interest:</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee;">{area_display}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold;">CV Attached:</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #eee;">{request.cvFileName or 'No'}</td>
+                </tr>
+            </table>
+            <p style="margin-top: 20px; color: #666; font-size: 12px;">
+                This registration was submitted from the ARETION & Company careers page.
+            </p>
+        </body>
+        </html>
+        """
+        
+        params = {
+            "from": SENDER_EMAIL,
+            "to": ["post@aretion.co.uk"],
+            "subject": f"Career Interest: {request.name} - {area_display}",
+            "html": html_content,
+            "reply_to": request.email
+        }
+        
+        # Try to send email
+        try:
+            email = await asyncio.to_thread(resend.Emails.send, params)
+            email_sent = True
+            email_id = email.get("id")
+            logger.info(f"Career interest email sent successfully: {email_id}")
+        except Exception as email_error_exc:
+            email_error = str(email_error_exc)
+            logger.warning(f"Email sending failed (will still store submission): {email_error}")
+        
+        # Store submission in database
+        submission_doc = {
+            "id": str(uuid.uuid4()),
+            "name": request.name,
+            "email": request.email,
+            "areaOfInterest": request.areaOfInterest,
+            "cvFileName": request.cvFileName,
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "email_sent": email_sent,
+            "email_id": email_id,
+            "email_error": email_error
+        }
+        await db.career_registrations.insert_one(submission_doc)
+        
+        logger.info(f"Career interest registration stored: {submission_doc['id']}")
+        
+        return {
+            "status": "success",
+            "message": "Thank you for registering your interest. We will be in touch when relevant opportunities arise."
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to process career registration: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to process your request: {str(e)}")
 
 # Include the router in the main app
