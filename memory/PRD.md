@@ -11,10 +11,13 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
 
 ## Architecture & Tech Stack
 - **Frontend:** React 19 with React Router
+- **Backend:** FastAPI with Pydantic models
+- **Database:** MongoDB (async with motor)
 - **Styling:** TailwindCSS with custom CSS theme (brand colors)
 - **Components:** Shadcn UI components
-- **Forms:** Frontend-only with localStorage (no backend integration yet)
-- **Deployment:** Single page application
+- **Email:** Resend API for transactional emails
+- **Storage:** Emergent Object Storage for file uploads
+- **Deployment:** Kubernetes-based preview environment
 
 ## Brand Identity
 **Color Palette:**
@@ -125,19 +128,21 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
    - Privacy Notice (UK GDPR compliant)
    - Terms of Use
 
-3. **Interactive Forms (Frontend-only)**
+3. **Interactive Forms (Backend-integrated)**
    - Career Interest Registration Form
      - Fields: Name, email, area of interest, CV upload
-     - Form validation
-     - Toast notifications
-     - Data stored in localStorage
+     - **CV File Upload:** Functional upload to Emergent Object Storage (PDF/DOC/DOCX, max 5MB)
+     - Backend API: POST /api/careers/register (multipart form data)
+     - Email notification via Resend API
+     - Data stored in MongoDB (career_registrations collection)
+     - Success modal on submission
    
    - Contact Form
-     - Fields: Enquiry type, name, organization, country, email, message
-     - Consent checkbox
-     - Form validation
-     - Toast notifications
-     - Data stored in localStorage
+     - Fields: Name, email, organisation, subject, message
+     - Backend API: POST /api/contact
+     - Email notification via Resend API
+     - Data stored in MongoDB (contact_submissions collection)
+     - Success modal on submission
 
 4. **Design Implementation**
    - Custom CSS theme with brand colors
@@ -158,15 +163,16 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
 ## Prioritized Backlog
 
 ### P0 Features (Critical)
-- None - MVP complete for frontend-only phase
+- None - MVP complete with backend integration
 
-### P1 Features (High Priority - Backend Phase)
-- Backend API development
-- Database integration (MongoDB)
-- Form submission handlers (contact, careers)
+### P1 Features (High Priority)
+- ✅ Backend API development (FastAPI)
+- ✅ Database integration (MongoDB)
+- ✅ Contact form backend integration
+- ✅ Careers form backend integration
+- ✅ Email notification system (Resend API)
+- ✅ CV/file upload handling (Emergent Object Storage)
 - Admin panel for content management
-- Email notification system
-- CV/file upload handling
 
 ### P2 Features (Nice to Have)
 - Insights article CMS
@@ -177,14 +183,17 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
 - SEO optimization
 - Analytics integration
 
+## Completed Tasks (March 2026)
+1. ✅ White space fix below footer (CSS overscroll behavior)
+2. ✅ Footer links update (Operating Entities external URLs, removed Media Enquiries)
+3. ✅ CV File Upload for Careers page with Object Storage integration
+4. ✅ Testing: Backend API tests (10/10 passed) + Frontend tests (7/7 passed)
+
 ## Next Tasks
-1. ✅ User to review frontend-only website
-2. ✅ Conditional logo display (orange on homepage, blue elsewhere)
-3. ✅ Loading spinner with company logo
-4. ✅ Standards & Policies page modal system with 5 policies
-5. **Implement Backend for Forms (P1):** Create FastAPI endpoints for Contact and Careers form submissions with email notifications
-6. Integrate forms with backend API
-7. Add file upload capability for CVs
+1. **Font Style Unification (Pending User Clarification):** User requested to unify font style - awaiting confirmation if body text should change from 'IBM Plex Sans' to 'Cormorant Garamond'
+2. Full end-to-end testing of all forms and modals
+3. Backend refactoring (split server.py into route modules)
+4. Modal component consolidation
 
 ## Deferred Items
 - Backend development (awaiting frontend approval)
@@ -194,11 +203,17 @@ Create a conservative website for ARETION & Company, a UK-based group. The compa
 - Sitemap, Cookie Policy, Accessibility, Modern Slavery Statement pages
 
 ## Technical Notes
-- All forms currently use localStorage for demo purposes
+- **Backend API:** FastAPI with /api prefix for all routes
+- **Database:** MongoDB collections: contact_submissions, career_registrations
+- **Email:** Resend API (test sender: onboarding@resend.dev - user needs to verify aretion.co.uk domain for production)
+- **File Storage:** Emergent Object Storage at aretion-corporate/careers/cv/
 - Mock data in `/app/frontend/src/mock/mockData.js`
 - Forms include proper validation and user feedback
 - Color palette extracted from client branding board
 - Responsive breakpoints: mobile (<768px), tablet (768-1024px), desktop (>1024px)
 
+## Known Issues
+- **Pending Clarification:** Font style unification - user requested to use heading font for body text
+
 ---
-**Last Updated:** 14 February 2026
+**Last Updated:** 21 March 2026
