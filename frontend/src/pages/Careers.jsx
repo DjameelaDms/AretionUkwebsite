@@ -22,6 +22,29 @@ const Careers = () => {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      // Validate file size (5MB max)
+      if (file.size > 5 * 1024 * 1024) {
+        toast({
+          title: "File Too Large",
+          description: "Please upload a file smaller than 5MB.",
+          variant: "destructive"
+        });
+        e.target.value = '';
+        return;
+      }
+      
+      // Validate file type
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+      if (!allowedTypes.includes(file.type)) {
+        toast({
+          title: "Invalid File Type",
+          description: "Please upload a PDF, DOC, or DOCX file.",
+          variant: "destructive"
+        });
+        e.target.value = '';
+        return;
+      }
+      
       setFormData(prev => ({ ...prev, cvFile: file }));
       setFileName(file.name);
     }
@@ -33,17 +56,22 @@ const Careers = () => {
 
     try {
       const API_URL = process.env.REACT_APP_BACKEND_URL;
+      
+      // Use FormData to send the file
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('areaOfInterest', formData.areaOfInterest);
+      
+      // Only append file if one was selected
+      if (formData.cvFile) {
+        formDataToSend.append('cvFile', formData.cvFile);
+      }
+      
       const response = await fetch(`${API_URL}/api/careers/register`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          areaOfInterest: formData.areaOfInterest,
-          cvFileName: fileName || null
-        }),
+        body: formDataToSend,
+        // Note: Don't set Content-Type header - browser will set it with boundary for multipart/form-data
       });
 
       const result = await response.json();
@@ -186,7 +214,7 @@ const Careers = () => {
               <h2 className="mb-8 text-center" style={{ color: 'var(--aretion-navy)' }}>
                 Register Your Interest
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" data-testid="careers-registration-form">
                 {/* Name */}
                 <div>
                   <label 
@@ -203,6 +231,7 @@ const Careers = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
+                    data-testid="careers-name-input"
                     className="w-full px-4 py-3 rounded border focus:outline-none focus:ring-2 transition-all"
                     style={{ 
                       borderColor: 'rgba(26, 58, 82, 0.2)',
@@ -227,6 +256,7 @@ const Careers = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
+                    data-testid="careers-email-input"
                     className="w-full px-4 py-3 rounded border focus:outline-none focus:ring-2 transition-all"
                     style={{ borderColor: 'rgba(26, 58, 82, 0.2)' }}
                   />
@@ -247,6 +277,7 @@ const Careers = () => {
                     required
                     value={formData.areaOfInterest}
                     onChange={handleChange}
+                    data-testid="careers-area-select"
                     className="w-full px-4 py-3 rounded border focus:outline-none focus:ring-2 transition-all"
                     style={{ borderColor: 'rgba(26, 58, 82, 0.2)' }}
                   >
@@ -277,6 +308,7 @@ const Careers = () => {
                       name="cvFile"
                       accept=".pdf,.doc,.docx"
                       onChange={handleFileChange}
+                      data-testid="careers-cv-upload-input"
                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                     />
                     <Upload size={32} style={{ color: 'var(--aretion-steel-blue)', margin: '0 auto 0.5rem' }} />
@@ -293,6 +325,7 @@ const Careers = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
+                  data-testid="careers-submit-btn"
                   className="w-full px-8 py-4 font-medium rounded transition-all inline-flex items-center justify-center space-x-2"
                   style={{
                     backgroundColor: isSubmitting ? 'var(--aretion-steel-blue)' : 'var(--aretion-navy)',

@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="min-h-screen pt-24">
+    <div className="flex-1 flex flex-col pt-24">
       {/* Hero with Image */}
       <section className="relative min-h-[400px] md:min-h-[500px] flex items-center">
         {/* Background Image */}
