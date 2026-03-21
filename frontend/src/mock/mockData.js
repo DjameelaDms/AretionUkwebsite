@@ -6,7 +6,7 @@ export const groupCompanies = [
     name: "ARETION Solution",
     tagline: "Intelligent Infrastructure Solutions",
     description: "Transformative solutions for operational excellence, safety, and resilience in critical infrastructure.",
-    link: "https://solution.aretion.co.uk",
+    link: "https://solutions.aretion.co.uk",
     icon: "Shield"
   },
   {
