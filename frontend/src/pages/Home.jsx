@@ -50,7 +50,7 @@ const Home = () => {
               ARETION & Company
             </h1>
             <p className="text-xl md:text-2xl mb-8 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)', maxWidth: '700px', lineHeight: '1.6' }}>
-              We bring together specialist companies in health informatics, medical publishing, and strategic consulting. Partnering with the NHS, Public Health England, and NICE, we deliver evidence-based advisory services that drive continuous improvement across health and social care standards.
+              At ARETION, we are strategically positioned at the intersection of health, wealth, and innovation. Our integrated model enables investors and care organizations to realize sustainable growth while advancing measurable improvements aligned with their strategic priorities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 

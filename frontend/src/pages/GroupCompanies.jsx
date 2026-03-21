@@ -146,10 +146,54 @@ const GroupCompanies = () => {
                 </h2>
               </div>
               <div className="md:col-span-3">
-                <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Advisory and project support across healthcare governance and medical law research themes, 
-                  delivered with confidentiality and disciplined execution.
+                <p className="text-lg mb-4 font-medium" style={{ color: 'var(--aretion-navy)' }}>
+                  Comprehensive healthcare consulting services and strategic advisory
                 </p>
+                <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                  Design and delivery support for healthcare organizations, emphasizing operational excellence and sustainable transformation.
+                </p>
+                <div className="mb-6">
+                  <div className="text-sm font-medium mb-3" style={{ color: 'var(--aretion-navy)' }}>
+                    Services include:
+                  </div>
+                  <ul className="space-y-2 grid md:grid-cols-2 gap-x-6">
+                    {[
+                      'Healthcare HR Consulting',
+                      'Disaster Management Consulting',
+                      'Healthcare Quality and National & International Accreditation',
+                      'Clinical Research Services',
+                      'Healthcare Legal & Legislative Services',
+                      'Healthcare Technology Solutions',
+                      'Project Management',
+                      'Toxicology & Environmental Medicine Services',
+                      'Medical & Healthcare Event Services',
+                      'Telepsychology & Mental Health Services',
+                      'Leadership Development & Communication Coaching',
+                      'Organizational Change Management Consulting',
+                      'Healthcare Financial Management Advisory',
+                      'Healthcare Economics & Capital Planning Support',
+                      'Risk Management & Insurance Advisory',
+                      'Financial Statement Analysis & Valuation Support',
+                      'Applied Analytics & Optimization Consulting',
+                      'Business Analytics, Reporting & Visualization',
+                      'Health Informatics & HIMS Optimization',
+                      'AI & Machine Learning Advisory for Healthcare',
+                      'Operations Strategy & Capacity Planning',
+                      'Supply Chain & Inventory Optimization',
+                      'Quality Management & TQM Program Design',
+                      'Strategic Project Management & PMO Support',
+                      'Healthcare Marketing, Branding & Patient-Centric Growth Strategy',
+                      'Digital & Social Media Marketing Performance Advisory',
+                      'Negotiation, Conflict Resolution & Partnership Support',
+                      'Applied Business & Market Research Services'
+                    ].map((service, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <span style={{ color: 'var(--aretion-rust)' }}>•</span>
+                        <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <a
                   href="https://Aretion.org"
                   target="_blank"
