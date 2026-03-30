@@ -15,7 +15,7 @@ const PrivacyContent = () => (
     <p><strong>Company details:</strong></p>
     <ul>
       <li>Legal name: ARETION & Company</li>
-      <li>Registered office: Shelton Street, Covent Garden, London, WC2H 9JQ</li>
+      <li>Registered office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
       <li>Contact email: post@aretion.co.uk</li>
       <li>Data Protection Officer: dpo@aretion.co.uk</li>
     </ul>
@@ -81,7 +81,7 @@ const TermsContent = () => (
     <p>The Site is operated by ARETION & Company.</p>
     <ul>
       <li>Contact: post@aretion.co.uk</li>
-      <li>Registered office: Shelton Street, Covent Garden, London, WC2H 9JQ</li>
+      <li>Registered office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
     </ul>
 
     <h3>3. Copyright and intellectual property</h3>

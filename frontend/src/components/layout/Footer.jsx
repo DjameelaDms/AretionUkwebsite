@@ -146,7 +146,7 @@ const Footer = () => {
                   United Kingdom
                 </div>
                 <address className="not-italic text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
-                  Shelton Street<br />
+                  71-75 Shelton Street<br />
                   Covent Garden<br />
                   London, WC2H 9JQ
                 </address>
@@ -239,7 +239,7 @@ const Footer = () => {
                       United Kingdom
                     </div>
                     <address className="not-italic text-sm" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
-                      71–75 Shelton Street, Covent Garden<br />
+                      71-75 Shelton Street, Covent Garden<br />
                       London, WC2H 9JQ
                     </address>
                   </div>

@@ -363,7 +363,7 @@ const PrivacyNoticeContent = () => (
     <p><strong>Company details:</strong></p>
     <ul>
       <li>Legal name: ARETION & Company</li>
-      <li>Registered office: Shelton Street, Covent Garden, London, WC2H 9JQ</li>
+      <li>Registered office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
       <li>Contact email: post@aretion.co.uk</li>
       <li>Data Protection Officer: dpo@aretion.co.uk</li>
     </ul>
@@ -552,7 +552,7 @@ const ComplaintsHandlingContent = () => (
     <p><strong>How to complain:</strong></p>
     <ul>
       <li>Email (preferred method): complaints@aretion.co.uk</li>
-      <li>Postal address: Complaints Team, ARETION & Company, Shelton Street, Covent Garden, London, WC2H 9JQ</li>
+      <li>Postal address: Complaints Team, ARETION & Company, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
       <li>Telephone: +44 20 3985 0907</li>
     </ul>
 
