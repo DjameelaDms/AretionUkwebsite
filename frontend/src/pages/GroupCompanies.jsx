@@ -123,7 +123,7 @@ const GroupCompanies = () => {
                     e.currentTarget.style.color = 'var(--aretion-navy)';
                   }}
                 >
-                  <span>Visit Solutions.aretion.co.uk</span>
+                  <span>Visit ARETION Solutions</span>
                   <ExternalLink size={16} />
                 </a>
               </div>
@@ -242,7 +242,7 @@ const GroupCompanies = () => {
                     e.currentTarget.style.color = 'var(--aretion-navy)';
                   }}
                 >
-                  <span>Visit Aretion.org</span>
+                  <span>Visit ARETION Healthcare Consulting</span>
                   <ExternalLink size={16} />
                 </a>
               </div>
@@ -316,7 +316,7 @@ const GroupCompanies = () => {
                     e.currentTarget.style.color = 'var(--aretion-navy)';
                   }}
                 >
-                  <span>Visit publishing.aretion.co.uk</span>
+                  <span>Visit ARETION Publishing Group</span>
                   <ExternalLink size={16} />
                 </a>
               </div>
