@@ -265,12 +265,8 @@ const GroupCompanies = () => {
                 </h2>
               </div>
               <div className="md:col-span-3">
-                <p className="text-lg mb-4 font-medium" style={{ color: 'var(--aretion-navy)' }}>
-                  Medicine, law and public health
-                </p>
                 <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Publishing across medicine, law and public health, with emphasis on editorial governance 
-                  and research integrity.
+                  ARETION Publishing Group is a strategic research-focused organisation dedicated to publishing peer-reviewed journals that advance academic and professional scholarship. Our work supports researchers, scholars, and practitioners by providing a credible platform for the publication of original studies, reviews, and other scholarly contributions across relevant disciplines. Through a strong emphasis on peer review, editorial quality, and academic integrity, we contribute to the dissemination of reliable knowledge and the development of research communities.
                 </p>
                 <div 
                   className="rounded-lg p-6 mb-6"
