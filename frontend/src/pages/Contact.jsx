@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send, CheckCircle, X } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -86,6 +87,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-24">
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with ARETION & Company. Contact us for investment opportunities, strategic partnerships, or corporate enquiries. Offices in London and the Gulf region."
+        keywords="contact ARETION, ARETION enquiries, London office, Gulf office, healthcare partnerships, investment enquiries"
+        canonical="https://aretion.co.uk/contact"
+      />
       {/* Hero with Image */}
       <section className="relative min-h-[400px] md:min-h-[500px] flex items-center">
         {/* Background Image */}

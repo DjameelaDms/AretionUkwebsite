@@ -1,10 +1,17 @@
 import React from 'react';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { groupCompanies } from '../mock/mockData';
+import SEO from '../components/SEO';
 
 const GroupCompanies = () => {
   return (
     <div className="min-h-screen pt-24">
+      <SEO 
+        title="ARETION Group"
+        description="Explore ARETION's three specialist operating entities: ARETION Solutions for healthcare technology, ARETION Healthcare Consulting for advisory services, and ARETION Publishing Group for academic journals."
+        keywords="ARETION Solutions, ARETION Healthcare Consulting, ARETION Publishing, healthcare technology, health informatics, medical journals, JMLPH"
+        canonical="https://aretion.co.uk/group-companies"
+      />
       {/* Hero with Image */}
       <section className="relative min-h-[400px] md:min-h-[500px] flex items-center">
         {/* Background Image */}

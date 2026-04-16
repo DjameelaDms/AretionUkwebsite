@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Upload, CheckCircle, X } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import SEO from '../components/SEO';
 
 const Careers = () => {
   const { toast } = useToast();
@@ -104,6 +105,12 @@ const Careers = () => {
 
   return (
     <div className="min-h-screen pt-24">
+      <SEO 
+        title="Careers"
+        description="Explore career opportunities at ARETION & Company. Join our team across healthcare technology, consulting, and publishing. Register your interest in London or Gulf region positions."
+        keywords="ARETION careers, healthcare jobs, London healthcare jobs, technology careers, consulting jobs, publishing careers, Gulf region jobs"
+        canonical="https://aretion.co.uk/careers"
+      />
       {/* Hero */}
       <section className="py-16 md:py-24" style={{ backgroundColor: 'var(--aretion-off-white)' }}>
         <div className="container mx-auto">

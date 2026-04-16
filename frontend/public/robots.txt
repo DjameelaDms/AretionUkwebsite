@@ -1,0 +1,9 @@
+# ARETION & Company - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aretion.co.uk/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

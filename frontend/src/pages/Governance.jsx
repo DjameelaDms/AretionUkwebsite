@@ -1,9 +1,16 @@
 import React from 'react';
 import { leadershipTeam } from '../mock/mockData';
+import SEO from '../components/SEO';
 
 const Governance = () => {
   return (
     <div className="min-h-screen pt-24">
+      <SEO 
+        title="Governance & Leadership"
+        description="Meet the leadership team at ARETION & Company. Learn about our governance principles, accountability structures, and commitment to responsible conduct across all operations."
+        keywords="ARETION leadership, governance, executive team, healthcare management, corporate governance, James Patterson CEO"
+        canonical="https://aretion.co.uk/governance"
+      />
       {/* Hero with Image */}
       <section className="relative min-h-[400px] md:min-h-[500px] flex items-center">
         {/* Background Image */}

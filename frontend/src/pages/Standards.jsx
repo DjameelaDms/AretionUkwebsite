@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { usePolicyModals } from '../components/PolicyModals';
+import SEO from '../components/SEO';
 
 // Define the policies with their modal handlers
 const policiesConfig = [
@@ -45,6 +46,12 @@ const Standards = () => {
 
   return (
     <div className="min-h-screen pt-24">
+      <SEO 
+        title="Standards & Policies"
+        description="View ARETION & Company's corporate standards and policies including Anti-Bribery Policy, Code of Conduct, Privacy Notice (UK GDPR), and Information Security guidelines."
+        keywords="ARETION policies, corporate governance, anti-bribery, code of conduct, UK GDPR, privacy notice, information security, publishing ethics"
+        canonical="https://aretion.co.uk/standards"
+      />
       {/* Policy Modals */}
       <PolicyModals />
 

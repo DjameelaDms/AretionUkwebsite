@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Home = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Home"
+        description="ARETION & Company is a UK-based group overseeing specialist entities in healthcare technology, consulting, and academic publishing. Delivering measurable outcomes across healthcare systems worldwide."
+        keywords="ARETION, healthcare technology, healthcare consulting, medical publishing, health informatics, UK healthcare, ARETION Solutions, ARETION Publishing"
+        canonical="https://aretion.co.uk"
+      />
       {/* Hero Section with Clear Background Image - No Overlay */}
       <section 
         className="relative pt-0 pb-0 overflow-hidden"

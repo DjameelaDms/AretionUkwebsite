@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const About = () => {
   return (
     <div className="flex-1 flex flex-col pt-24">
+      <SEO 
+        title="About Us"
+        description="Learn about ARETION & Company's origins, evolution, and structure. A UK-based healthcare group providing oversight, governance, and strategic direction across technology, consulting, and publishing."
+        keywords="about ARETION, ARETION history, UK healthcare company, healthcare group, company governance"
+        canonical="https://aretion.co.uk/about"
+      />
       {/* Hero with Image */}
       <section className="relative min-h-[400px] md:min-h-[500px] flex items-center">
         {/* Background Image */}

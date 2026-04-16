@@ -19,8 +19,17 @@ const LoadingSpinner = () => {
       handleLoad();
     } else {
       window.addEventListener('load', handleLoad);
-      return () => window.removeEventListener('load', handleLoad);
     }
+    
+    // Fallback: Hide spinner after 3 seconds max
+    const fallbackTimer = setTimeout(() => {
+      handleLoad();
+    }, 3000);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   if (!shouldRender) return null;
@@ -70,7 +79,7 @@ const LoadingSpinner = () => {
         />
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes gentlePulse {
           0%, 100% {
             opacity: 1;
