@@ -53,7 +53,6 @@ const AntiBriberyContent = () => (
     <p>If you suspect, become aware of, or are offered a bribe, you must report it immediately to:</p>
     <ul>
       <li>Compliance and Ethics team: compliance@aretion.co.uk</li>
-      <li>External Whistleblowing Hotline: +44 20 3985 0907</li>
     </ul>
     <p>ARETION prohibits retaliation against anyone who reports concerns in good faith.</p>
 
@@ -71,7 +70,6 @@ const AntiBriberyContent = () => (
     <p>For questions, guidance, or to report concerns:</p>
     <ul>
       <li>Compliance and Ethics Team: compliance@aretion.co.uk</li>
-      <li>External Whistleblowing Hotline: +44 20 3985 0907</li>
     </ul>
   </div>
 );
@@ -237,7 +235,6 @@ const CodeOfConductContent = () => (
     <ul>
       <li>Your manager or HR</li>
       <li>Compliance and Ethics team: compliance@aretion.co.uk</li>
-      <li>External Whistleblowing Hotline: +44 20 3985 0907</li>
     </ul>
     <p><strong>Non-retaliation:</strong> ARETION prohibits retaliation against anyone who raises a concern in good faith. Retaliation is itself a serious breach of this Code.</p>
 
@@ -346,7 +343,6 @@ const ConflictsOfInterestContent = () => (
     <ul>
       <li>Compliance and Ethics Team: compliance@aretion.co.uk</li>
       <li>Your Manager or HR Department</li>
-      <li>External Whistleblowing Hotline: +44 20 3985 0907</li>
     </ul>
   </div>
 );
@@ -553,7 +549,6 @@ const ComplaintsHandlingContent = () => (
     <ul>
       <li>Email (preferred method): complaints@aretion.co.uk</li>
       <li>Postal address: Complaints Team, ARETION & Company, Shelton Street, Covent Garden, London, WC2H 9JQ</li>
-      <li>Telephone: +44 20 3985 0907</li>
     </ul>
 
     <h3>6. Complaints Handling Process</h3>
@@ -589,7 +584,6 @@ const ComplaintsHandlingContent = () => (
     <h3>10. Contact Information</h3>
     <ul>
       <li>Email: complaints@aretion.co.uk</li>
-      <li>Telephone: +44 20 3985 0907</li>
       <li>Data Protection Officer: dpo@aretion.co.uk</li>
       <li>Compliance and Ethics Team: compliance@aretion.co.uk</li>
     </ul>

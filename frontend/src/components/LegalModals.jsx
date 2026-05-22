@@ -279,7 +279,6 @@ const CodeOfConductContent = () => (
     <ul>
       <li>Your manager or HR</li>
       <li>Compliance and Ethics team: compliance@aretion.co.uk</li>
-      <li>External Whistleblowing Hotline: +44 20 3985 0907</li>
     </ul>
     <p><strong>Non-retaliation:</strong> ARETION prohibits retaliation against anyone who raises a concern in good faith. Retaliation is itself a serious breach of this Code.</p>
 
@@ -351,7 +350,6 @@ const AntiBriberyContent = () => (
     <p>If you suspect, become aware of, or are offered a bribe, you must report it immediately to:</p>
     <ul>
       <li>Compliance and Ethics team: compliance@aretion.co.uk</li>
-      <li>External Whistleblowing Hotline: +44 20 3985 0907</li>
     </ul>
     <p>ARETION prohibits retaliation against anyone who reports concerns in good faith.</p>
 
@@ -369,7 +367,6 @@ const AntiBriberyContent = () => (
     <p>For questions, guidance, or to report concerns:</p>
     <ul>
       <li>Compliance and Ethics Team: compliance@aretion.co.uk</li>
-      <li>External Whistleblowing Hotline: +44 20 3985 0907</li>
     </ul>
   </div>
 );
