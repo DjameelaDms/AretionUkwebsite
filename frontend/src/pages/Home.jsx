@@ -52,50 +52,6 @@ const Home = () => {
             <p className="text-xl md:text-2xl mb-8 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)', maxWidth: '700px', lineHeight: '1.6' }}>
               At ARETION, we are strategically positioned at the intersection of health, wealth, and innovation. Our integrated model enables investors and care organizations to realize sustainable growth while advancing measurable improvements aligned with their strategic priorities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/group-companies"
-                className="px-8 py-4 font-medium transition-all inline-flex items-center space-x-2 text-sm"
-                style={{
-                  backgroundColor: 'white',
-                  color: 'var(--aretion-navy)',
-                  letterSpacing: '0.05em',
-                  border: '1px solid white'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--aretion-navy)';
-                  e.currentTarget.style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'white';
-                  e.currentTarget.style.color = 'var(--aretion-navy)';
-                }}
-              >
-                <span>Explore ARETION Group</span>
-                <ArrowRight size={16} />
-              </Link>
-              <Link 
-                to="/contact"
-                className="px-8 py-4 font-medium border transition-all text-sm"
-                style={{
-                  borderColor: 'rgba(255, 255, 255, 0.6)',
-                  color: 'white',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(10px)',
-                  letterSpacing: '0.05em'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-                  e.currentTarget.style.borderColor = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
-                }}
-              >
-                Contact the Group
-              </Link>
-            </div>
           </div>
         </div>
       </section>

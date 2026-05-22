@@ -170,7 +170,7 @@ const Contact = () => {
                       London Office
                     </div>
                     <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                      71-75 Shelton Street<br />
+                      Shelton Street<br />
                       Covent Garden<br />
                       London, WC2H 9JQ<br />
                       United Kingdom

@@ -16,18 +16,9 @@ const Footer = () => {
       title: 'Our Group',
       links: [
         { label: 'About ARETION', path: '/about' },
-        { label: 'ARETION Group', path: '/group-companies' },
         { label: 'Governance & Leadership', path: '/governance' },
         { label: 'Standards & Policies', path: '/standards' },
         { label: 'Our History', path: '/about#history' },
-      ]
-    },
-    {
-      title: 'Operating Entities',
-      links: [
-        { label: 'ARETION Solutions', path: 'https://solutions.aretion.co.uk/', external: true },
-        { label: 'ARETION Healthcare Consulting', path: 'https://aretion.org/', external: true },
-        { label: 'ARETION Publishing', path: 'https://publishing.aretion.co.uk/', external: true },
       ]
     },
     {
@@ -82,8 +73,8 @@ const Footer = () => {
       {/* Middle Navigation Grid */}
       <div style={{ backgroundColor: '#0f2a3d' }}>
         <div className="container mx-auto py-12 px-4 md:px-8">
-          {/* Desktop Grid - 4 columns */}
-          <div className="hidden md:grid md:grid-cols-4 gap-8 lg:gap-12">
+          {/* Desktop Grid - 3 columns */}
+          <div className="hidden md:grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Navigation Sections */}
             {navigationSections.map((section, index) => (
               <div key={index}>
@@ -146,7 +137,7 @@ const Footer = () => {
                   United Kingdom
                 </div>
                 <address className="not-italic text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
-                  71-75 Shelton Street<br />
+                  Shelton Street<br />
                   Covent Garden<br />
                   London, WC2H 9JQ
                 </address>
@@ -239,7 +230,7 @@ const Footer = () => {
                       United Kingdom
                     </div>
                     <address className="not-italic text-sm" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
-                      71-75 Shelton Street, Covent Garden<br />
+                      Shelton Street, Covent Garden<br />
                       London, WC2H 9JQ
                     </address>
                   </div>
